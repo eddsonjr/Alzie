@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD75A8E61D2B07A7005DECCD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; };
+		AD75A8E71D2B07A8005DECCD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD75A8E81D2B07A8005DECCD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; };
+		AD75A8E91D2B07A8005DECCD /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683011D2B04F400496E47 /* AppDelegate.swift */; };
 		ADA683041D2B04F400496E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683031D2B04F400496E47 /* ViewController.swift */; };
 		ADA683071D2B04F400496E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA683051D2B04F400496E47 /* Main.storyboard */; };
@@ -34,9 +38,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AD75A8EA1D2B07A8005DECCD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD75A8E91D2B07A8005DECCD /* RealmSwift.framework in Embed Frameworks */,
+				AD75A8E71D2B07A8005DECCD /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4AF1532D13BF5DCEC5E92EBD /* Pods-Alziegit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.debug.xcconfig"; sourceTree = "<group>"; };
 		523263B38CFF0BE7CE8C18ED /* Pods-Alziegit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.release.xcconfig"; sourceTree = "<group>"; };
+		AD75A8E41D2B07A7005DECCD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		ADA682FE1D2B04F400496E47 /* Alziegit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alziegit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683011D2B04F400496E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA683031D2B04F400496E47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD75A8E61D2B07A7005DECCD /* Realm.framework in Frameworks */,
 				E5FD36758B6A25F777FA6669 /* Pods_Alziegit.framework in Frameworks */,
+				AD75A8E81D2B07A8005DECCD /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +102,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD75A8EB1D2B0944005DECCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADA683051D2B04F400496E47 /* Main.storyboard */,
+				ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AD75A8EC1D2B0966005DECCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADA683011D2B04F400496E47 /* AppDelegate.swift */,
+				ADA683031D2B04F400496E47 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AD75A8ED1D2B098A005DECCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD75A8EE1D2B09B8005DECCD /* DAO */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AD75A8EE1D2B09B8005DECCD /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		ADA682F51D2B04F400496E47 = {
 			isa = PBXGroup;
 			children = (
+				AD75A8E41D2B07A7005DECCD /* Realm.framework */,
+				AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */,
 				ADA683001D2B04F400496E47 /* Alziegit */,
 				ADA683151D2B04F500496E47 /* AlziegitTests */,
 				ADA683201D2B04F500496E47 /* AlziegitUITests */,
@@ -104,11 +162,10 @@
 		ADA683001D2B04F400496E47 /* Alziegit */ = {
 			isa = PBXGroup;
 			children = (
-				ADA683011D2B04F400496E47 /* AppDelegate.swift */,
-				ADA683031D2B04F400496E47 /* ViewController.swift */,
-				ADA683051D2B04F400496E47 /* Main.storyboard */,
+				AD75A8ED1D2B098A005DECCD /* Model */,
+				AD75A8EC1D2B0966005DECCD /* Controller */,
+				AD75A8EB1D2B0944005DECCD /* View */,
 				ADA683081D2B04F400496E47 /* Assets.xcassets */,
-				ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */,
 				ADA6830D1D2B04F500496E47 /* Info.plist */,
 			);
 			path = Alziegit;
@@ -162,6 +219,7 @@
 				ADA682FC1D2B04F400496E47 /* Resources */,
 				22D4B44ECD0BB72A27DD085F /* [CP] Embed Pods Frameworks */,
 				2696264313E2CD89A87F349C /* [CP] Copy Pods Resources */,
+				AD75A8EA1D2B07A8005DECCD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,6 +537,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Alziegit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.Alziegit;
@@ -492,6 +554,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Alziegit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.Alziegit;

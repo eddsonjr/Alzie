@@ -11,6 +11,9 @@
 		AD75A8E71D2B07A8005DECCD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD75A8E81D2B07A8005DECCD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; };
 		AD75A8E91D2B07A8005DECCD /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD75A8F01D2B0B17005DECCD /* Albuns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8EF1D2B0B17005DECCD /* Albuns.swift */; };
+		AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */; };
+		AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */; };
 		ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683011D2B04F400496E47 /* AppDelegate.swift */; };
 		ADA683041D2B04F400496E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683031D2B04F400496E47 /* ViewController.swift */; };
 		ADA683071D2B04F400496E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA683051D2B04F400496E47 /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		523263B38CFF0BE7CE8C18ED /* Pods-Alziegit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.release.xcconfig"; sourceTree = "<group>"; };
 		AD75A8E41D2B07A7005DECCD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		AD75A8EF1D2B0B17005DECCD /* Albuns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Albuns.swift; sourceTree = "<group>"; };
+		AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = albumDAO.swift; sourceTree = "<group>"; };
+		AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosAlbum.swift; sourceTree = "<group>"; };
 		ADA682FE1D2B04F400496E47 /* Alziegit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alziegit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683011D2B04F400496E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA683031D2B04F400496E47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		AD75A8ED1D2B098A005DECCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD75A8EF1D2B0B17005DECCD /* Albuns.swift */,
+				AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */,
 				AD75A8EE1D2B09B8005DECCD /* DAO */,
 			);
 			name = Model;
@@ -131,6 +139,7 @@
 		AD75A8EE1D2B09B8005DECCD /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -390,8 +399,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */,
+				AD75A8F01D2B0B17005DECCD /* Albuns.swift in Sources */,
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
+				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

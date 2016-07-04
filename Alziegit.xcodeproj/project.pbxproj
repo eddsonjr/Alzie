@@ -138,12 +138,12 @@
 		ADA682F51D2B04F400496E47 = {
 			isa = PBXGroup;
 			children = (
+				ADA683001D2B04F400496E47 /* Alziegit */,
+				ADA682FF1D2B04F400496E47 /* Products */,
 				AD75A8E41D2B07A7005DECCD /* Realm.framework */,
 				AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */,
-				ADA683001D2B04F400496E47 /* Alziegit */,
 				ADA683151D2B04F500496E47 /* AlziegitTests */,
 				ADA683201D2B04F500496E47 /* AlziegitUITests */,
-				ADA682FF1D2B04F400496E47 /* Products */,
 				C71A74A60B9D36F0B973930E /* Pods */,
 				D24B4D10373C58C6B705A406 /* Frameworks */,
 			);

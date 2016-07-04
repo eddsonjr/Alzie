@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683011D2B04F400496E47 /* AppDelegate.swift */; };
+		ADA683041D2B04F400496E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683031D2B04F400496E47 /* ViewController.swift */; };
+		ADA683071D2B04F400496E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA683051D2B04F400496E47 /* Main.storyboard */; };
+		ADA683091D2B04F400496E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA683081D2B04F400496E47 /* Assets.xcassets */; };
+		ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */; };
+		ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683161D2B04F500496E47 /* AlziegitTests.swift */; };
+		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADA683131D2B04F500496E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA682F61D2B04F400496E47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA682FD1D2B04F400496E47;
+			remoteInfo = Alziegit;
+		};
+		ADA6831E1D2B04F500496E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA682F61D2B04F400496E47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA682FD1D2B04F400496E47;
+			remoteInfo = Alziegit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADA682FE1D2B04F400496E47 /* Alziegit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alziegit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA683011D2B04F400496E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADA683031D2B04F400496E47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADA683061D2B04F400496E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADA683081D2B04F400496E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA6830B1D2B04F400496E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADA6830D1D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA683121D2B04F500496E47 /* AlziegitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlziegitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA683161D2B04F500496E47 /* AlziegitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitTests.swift; sourceTree = "<group>"; };
+		ADA683181D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlziegitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA683211D2B04F500496E47 /* AlziegitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitUITests.swift; sourceTree = "<group>"; };
+		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADA682FB1D2B04F400496E47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA6830F1D2B04F500496E47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA6831A1D2B04F500496E47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADA682F51D2B04F400496E47 = {
+			isa = PBXGroup;
+			children = (
+				ADA683001D2B04F400496E47 /* Alziegit */,
+				ADA683151D2B04F500496E47 /* AlziegitTests */,
+				ADA683201D2B04F500496E47 /* AlziegitUITests */,
+				ADA682FF1D2B04F400496E47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADA682FF1D2B04F400496E47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA682FE1D2B04F400496E47 /* Alziegit.app */,
+				ADA683121D2B04F500496E47 /* AlziegitTests.xctest */,
+				ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADA683001D2B04F400496E47 /* Alziegit */ = {
+			isa = PBXGroup;
+			children = (
+				ADA683011D2B04F400496E47 /* AppDelegate.swift */,
+				ADA683031D2B04F400496E47 /* ViewController.swift */,
+				ADA683051D2B04F400496E47 /* Main.storyboard */,
+				ADA683081D2B04F400496E47 /* Assets.xcassets */,
+				ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */,
+				ADA6830D1D2B04F500496E47 /* Info.plist */,
+			);
+			path = Alziegit;
+			sourceTree = "<group>";
+		};
+		ADA683151D2B04F500496E47 /* AlziegitTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA683161D2B04F500496E47 /* AlziegitTests.swift */,
+				ADA683181D2B04F500496E47 /* Info.plist */,
+			);
+			path = AlziegitTests;
+			sourceTree = "<group>";
+		};
+		ADA683201D2B04F500496E47 /* AlziegitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA683211D2B04F500496E47 /* AlziegitUITests.swift */,
+				ADA683231D2B04F500496E47 /* Info.plist */,
+			);
+			path = AlziegitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADA682FD1D2B04F400496E47 /* Alziegit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA683261D2B04F500496E47 /* Build configuration list for PBXNativeTarget "Alziegit" */;
+			buildPhases = (
+				ADA682FA1D2B04F400496E47 /* Sources */,
+				ADA682FB1D2B04F400496E47 /* Frameworks */,
+				ADA682FC1D2B04F400496E47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alziegit;
+			productName = Alziegit;
+			productReference = ADA682FE1D2B04F400496E47 /* Alziegit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADA683111D2B04F500496E47 /* AlziegitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA683291D2B04F500496E47 /* Build configuration list for PBXNativeTarget "AlziegitTests" */;
+			buildPhases = (
+				ADA6830E1D2B04F500496E47 /* Sources */,
+				ADA6830F1D2B04F500496E47 /* Frameworks */,
+				ADA683101D2B04F500496E47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA683141D2B04F500496E47 /* PBXTargetDependency */,
+			);
+			name = AlziegitTests;
+			productName = AlziegitTests;
+			productReference = ADA683121D2B04F500496E47 /* AlziegitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADA6831C1D2B04F500496E47 /* AlziegitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA6832C1D2B04F500496E47 /* Build configuration list for PBXNativeTarget "AlziegitUITests" */;
+			buildPhases = (
+				ADA683191D2B04F500496E47 /* Sources */,
+				ADA6831A1D2B04F500496E47 /* Frameworks */,
+				ADA6831B1D2B04F500496E47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA6831F1D2B04F500496E47 /* PBXTargetDependency */,
+			);
+			name = AlziegitUITests;
+			productName = AlziegitUITests;
+			productReference = ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADA682F61D2B04F400496E47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Edson  Jr";
+				TargetAttributes = {
+					ADA682FD1D2B04F400496E47 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					ADA683111D2B04F500496E47 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ADA682FD1D2B04F400496E47;
+					};
+					ADA6831C1D2B04F500496E47 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ADA682FD1D2B04F400496E47;
+					};
+				};
+			};
+			buildConfigurationList = ADA682F91D2B04F400496E47 /* Build configuration list for PBXProject "Alziegit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADA682F51D2B04F400496E47;
+			productRefGroup = ADA682FF1D2B04F400496E47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADA682FD1D2B04F400496E47 /* Alziegit */,
+				ADA683111D2B04F500496E47 /* AlziegitTests */,
+				ADA6831C1D2B04F500496E47 /* AlziegitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADA682FC1D2B04F400496E47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */,
+				ADA683091D2B04F400496E47 /* Assets.xcassets in Resources */,
+				ADA683071D2B04F400496E47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA683101D2B04F500496E47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA6831B1D2B04F500496E47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA682FA1D2B04F400496E47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
+				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA6830E1D2B04F500496E47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA683191D2B04F500496E47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADA683141D2B04F500496E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA682FD1D2B04F400496E47 /* Alziegit */;
+			targetProxy = ADA683131D2B04F500496E47 /* PBXContainerItemProxy */;
+		};
+		ADA6831F1D2B04F500496E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA682FD1D2B04F400496E47 /* Alziegit */;
+			targetProxy = ADA6831E1D2B04F500496E47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADA683051D2B04F400496E47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA683061D2B04F400496E47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA6830B1D2B04F400496E47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADA683241D2B04F500496E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADA683251D2B04F500496E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADA683271D2B04F500496E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Alziegit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.Alziegit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADA683281D2B04F500496E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Alziegit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.Alziegit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ADA6832A1D2B04F500496E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AlziegitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.AlziegitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alziegit.app/Alziegit";
+			};
+			name = Debug;
+		};
+		ADA6832B1D2B04F500496E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AlziegitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.AlziegitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alziegit.app/Alziegit";
+			};
+			name = Release;
+		};
+		ADA6832D1D2B04F500496E47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AlziegitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.AlziegitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alziegit;
+			};
+			name = Debug;
+		};
+		ADA6832E1D2B04F500496E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AlziegitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.edu.bepid.AlziegitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Alziegit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADA682F91D2B04F400496E47 /* Build configuration list for PBXProject "Alziegit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA683241D2B04F500496E47 /* Debug */,
+				ADA683251D2B04F500496E47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA683261D2B04F500496E47 /* Build configuration list for PBXNativeTarget "Alziegit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA683271D2B04F500496E47 /* Debug */,
+				ADA683281D2B04F500496E47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADA683291D2B04F500496E47 /* Build configuration list for PBXNativeTarget "AlziegitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA6832A1D2B04F500496E47 /* Debug */,
+				ADA6832B1D2B04F500496E47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADA6832C1D2B04F500496E47 /* Build configuration list for PBXNativeTarget "AlziegitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA6832D1D2B04F500496E47 /* Debug */,
+				ADA6832E1D2B04F500496E47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADA682F61D2B04F400496E47 /* Project object */;
+}

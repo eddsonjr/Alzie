@@ -18,6 +18,9 @@ class  AlubmDAO {
     let realm = try! Realm()
     
 
+    /*Operacoes sobre os albuns*/
+    
+    ///salva os dados de um Album no banco de dados. Depois disso é necessário salvar as fotos no album
     func salvarAlbum(album: AlbumEntes){
         try! realm.write{
             realm.add(album)
@@ -25,12 +28,28 @@ class  AlubmDAO {
         }
     }
     
+
+    ///Retorna todos os albuns criados. Retornar um Results<AlbumEntes>
+    func listarTodosAlbuns() -> Results<AlbumEntes> {
+       var albuns = realm.objects(AlbumEntes.self)
+       return albuns
+    }
     
     
+    
+    ///apaga um determinado album
+    func apagarAlbum(album: AlbumEntes){
+        realm.delete(album)
+    }
+    
+
     
     
     
     /*Operacoes de DAO sobre as fotos do album*/
+    
+    
+    ///salva uma foto em um determinado album. Ao salvar a foto, é necessario especificar o dono do album
     func salvarFotoNoAlbum(foto: FotosDoAlbum){
         try! realm.write{
             realm.add(foto)
@@ -38,6 +57,21 @@ class  AlubmDAO {
         }
     }
 
+    
+    
+    ///retorna todas as fotos que estao naquele album
+    func listarTodasFotos() -> Results<FotosDoAlbum> {
+        var fotos = realm.objects(FotosDoAlbum.self)
+        return fotos
+    }
+    
+    
+    ///apaga uma determinada foto daquele album
+    func apagarFoto(foto: FotosDoAlbum){
+        realm.delete(foto)
+    }
+    
+    
     
     
     

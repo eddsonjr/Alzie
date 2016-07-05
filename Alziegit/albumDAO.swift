@@ -12,7 +12,7 @@
 import Foundation
 import RealmSwift
 
-class  AlubmDAO {
+class  AlbumDAO {
     
     //instancia do banco de dados
     let realm = try! Realm()
@@ -36,6 +36,10 @@ class  AlubmDAO {
     }
     
     
+    ///retorna a quantidade de albuns criados ate o momento
+    func retornarQuantidadeAlbunsNaBase() -> Int{
+        return realm.objects(AlbumEntes).count
+    }
     
     ///apaga um determinado album
     func apagarAlbum(album: AlbumEntes){

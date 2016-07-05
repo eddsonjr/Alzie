@@ -171,6 +171,7 @@
 		ADA683001D2B04F400496E47 /* Alziegit */ = {
 			isa = PBXGroup;
 			children = (
+				ADB3B7A41D2C3A5E00D60FD5 /* Extras */,
 				AD75A8ED1D2B098A005DECCD /* Model */,
 				AD75A8EC1D2B0966005DECCD /* Controller */,
 				AD75A8EB1D2B0944005DECCD /* View */,
@@ -196,6 +197,13 @@
 				ADA683231D2B04F500496E47 /* Info.plist */,
 			);
 			path = AlziegitUITests;
+			sourceTree = "<group>";
+		};
+		ADB3B7A41D2C3A5E00D60FD5 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 		C71A74A60B9D36F0B973930E /* Pods */ = {

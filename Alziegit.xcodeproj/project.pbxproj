@@ -21,6 +21,8 @@
 		ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */; };
 		ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683161D2B04F500496E47 /* AlziegitTests.swift */; };
 		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
+		ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3481D2D7AF000FECC5A /* Camera.swift */; };
+		ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */ = {isa = PBXBuildFile; fileRef = ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */; };
 		E5FD36758B6A25F777FA6669 /* Pods_Alziegit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlziegitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683211D2B04F500496E47 /* AlziegitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitUITests.swift; sourceTree = "<group>"; };
 		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC2C3481D2D7AF000FECC5A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trechos_codigos_anotacoes; sourceTree = "<group>"; };
 		AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alziegit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +181,7 @@
 				AD75A8EB1D2B0944005DECCD /* View */,
 				ADA683081D2B04F400496E47 /* Assets.xcassets */,
 				ADA6830D1D2B04F500496E47 /* Info.plist */,
+				ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */,
 			);
 			path = Alziegit;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		ADB3B7A41D2C3A5E00D60FD5 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				ADC2C3481D2D7AF000FECC5A /* Camera.swift */,
 			);
 			name = Extras;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */,
 				ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */,
 				ADA683091D2B04F400496E47 /* Assets.xcassets in Resources */,
 				ADA683071D2B04F400496E47 /* Main.storyboard in Resources */,
@@ -409,6 +416,7 @@
 			files = (
 				AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */,
 				AD75A8F01D2B0B17005DECCD /* Albuns.swift in Sources */,
+				ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */,
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,

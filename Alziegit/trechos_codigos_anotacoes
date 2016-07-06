@@ -108,3 +108,44 @@ var album : AlbumEntes = AlbumEntes()
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var childControllers = self.childViewControllers
+
+if childControllers.count != 0{
+for controller in childControllers{
+
+if (controller.getViewID() == "algumacoisa"){
+//do something.
+}
+
+}
+}
+
+
+

@@ -9,7 +9,6 @@
 import UIKit
 
 class AdicionarPessoaContainerControllerViewController: UIViewController {
-
     
     
     //Elementos Visuais do Container de Adicionar Pessoas
@@ -17,6 +16,12 @@ class AdicionarPessoaContainerControllerViewController: UIViewController {
     @IBOutlet weak var imagemPessoaAdicionarImageView: UIImageView!
     @IBOutlet weak var nomePessoaAdicionarTextEdit: UITextField!
     @IBOutlet weak var notasPessoaAdicionarTextArea: UITextView!
+    
+    
+    override func getViewID() -> String{
+        return "childNameHere"
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,4 +49,7 @@ class AdicionarPessoaContainerControllerViewController: UIViewController {
     }
     */
 
+    @IBAction func testSendData(sender: AnyObject) {
+        
+    }
 }

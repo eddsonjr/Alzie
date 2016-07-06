@@ -23,6 +23,7 @@
 		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
 		ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3481D2D7AF000FECC5A /* Camera.swift */; };
 		ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */ = {isa = PBXBuildFile; fileRef = ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */; };
+		ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */; };
 		E5FD36758B6A25F777FA6669 /* Pods_Alziegit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC2C3481D2D7AF000FECC5A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trechos_codigos_anotacoes; sourceTree = "<group>"; };
+		ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alziegit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				ADA683011D2B04F400496E47 /* AppDelegate.swift */,
 				ADA683031D2B04F400496E47 /* ViewController.swift */,
+				ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
+				ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

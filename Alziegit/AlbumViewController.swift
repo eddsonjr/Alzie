@@ -14,7 +14,7 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navbar()
+       // navbar()
     }
 
     override func didReceiveMemoryWarning() {

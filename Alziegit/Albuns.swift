@@ -22,6 +22,7 @@ class AlbumEntes: Object {
     dynamic var NomeEnteLegenda: String?
     dynamic var grauParentescoLegenda: String?
     dynamic var fotoAvatar: NSData?
+    dynamic var notasPessoa: String?
     
     //lista de fotos
     var listaFotosDoAlbum =  List<FotosDoAlbum>()

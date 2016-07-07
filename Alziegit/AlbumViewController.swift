@@ -8,12 +8,43 @@
 
 import UIKit
 
-class AlbumViewController: UIViewController {
+class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    var collectionView: UICollectionView?
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let alerta: UIAlertView = UIAlertView(title: "teste", message: "AlubmViewController ", delegate: self, cancelButtonTitle: "ok")
-        alerta.show()
+       // let alerta: UIAlertView = UIAlertView(title: "teste", message: "AlubmViewController ", delegate: self, cancelButtonTitle: "ok")
+        //alerta.show()
+        
+        
+        //TENTATIVA
+        
+        screenSize = UIScreen.mainScreen().bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
+        // Do any additional setup after loading the view, typically from a nib
+//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+//        layout.itemSize = CGSize(width: screenWidth / 3, height: screenWidth / 3)
+//        layout.minimumInteritemSpacing = 0
+//        layout.minimumLineSpacing = 0
+        
+//        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+////        collectionView!.dataSource = self
+////        collectionView!.delegate = self
+//        collectionView!.registerClass(MyCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+//        collectionView!.backgroundColor = UIColor.greenColor()
+      //  self.view.addSubview(collectionView!)
+    
+        //FIM
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,42 +53,60 @@ class AlbumViewController: UIViewController {
     }
 
     
+    let reuserIdentifier  = "cell"
+    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     
     
-    func navbar(){
+//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    // make a cell for each cell index path
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
         
-        let rightAddBarButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add,target: self,action: #selector(AlbumViewController.addTapped))
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        cell.NomeLabel.text = self.items[indexPath.item]
+        cell.backgroundColor = UIColor.whiteColor()//make cell more visible in our examle project
         
-        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 30))
-        label.text = "Memórias"
-        label.font = UIFont.boldSystemFontOfSize(18)
-        label.textAlignment = NSTextAlignment.Center
-        self.navigationItem.titleView = label
+        //improving the cell
         
-        self.navigationItem.setRightBarButtonItems([rightAddBarButtonItem], animated: true)
+        cell.layer.borderColor = UIColor.blackColor().CGColor
+        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 10
+        cell.frame.size.width = screenWidth / 4.3
+        cell.frame.size.height = screenWidth / 4.3
+        return cell
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // handle tap avents
+        
+        print("You selected cell #\(indexPath.item)!")
         
         
     }
-
     
-    func addTapped(){
-        
-        
-        
-        
-    }
 
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+
+class MyCollectionViewCell: UICollectionViewCell{
+    
+    
+    @IBOutlet var NomeLabel: UILabel!
+    
+    @IBOutlet var imagePessoa: UIImageView!
+    
+    
+    
 }

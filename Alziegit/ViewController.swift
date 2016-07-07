@@ -16,9 +16,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let alerta: UIAlertView = UIAlertView(title: "teste", message: "ViewController.swift ", delegate: self, cancelButtonTitle: "ok")
-        alerta.show()
+//        
+//        let alerta: UIAlertView = UIAlertView(title: "teste", message: "ViewController.swift ", delegate: self, cancelButtonTitle: "ok")
+//        alerta.show()
     
     }
 

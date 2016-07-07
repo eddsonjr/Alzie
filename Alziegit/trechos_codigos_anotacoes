@@ -121,6 +121,38 @@ var album : AlbumEntes = AlbumEntes()
 
 
 
+//
+//        var childControllers = self.childViewControllers
+//
+//        if childControllers.count != 0{
+//            for controller in childControllers{
+//
+//                if (controller.getViewID() == "algumacoisa"){
+//                    let alerta: UIAlertView = UIAlertView(title: "teste", message: "Verificando qual é ", delegate: self, cancelButtonTitle: "ok")
+//                    alerta.show()
+//
+//                }
+//
+//            }
+//        }
+
+
+
+
+
+
+//
+//    override func getViewID() -> String{
+//        return "childNameHere"
+//    }
+
+
+
+
+
+
+
+
 
 
 

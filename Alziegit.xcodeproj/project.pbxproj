@@ -14,6 +14,7 @@
 		AD75A8F01D2B0B17005DECCD /* Albuns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8EF1D2B0B17005DECCD /* Albuns.swift */; };
 		AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */; };
 		AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */; };
+		AD9AC0BB1D2E65B200CD805A /* AdicionarPessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9AC0BA1D2E65B200CD805A /* AdicionarPessoasViewController.swift */; };
 		ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683011D2B04F400496E47 /* AppDelegate.swift */; };
 		ADA683041D2B04F400496E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683031D2B04F400496E47 /* ViewController.swift */; };
 		ADA683071D2B04F400496E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA683051D2B04F400496E47 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		AD75A8EF1D2B0B17005DECCD /* Albuns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Albuns.swift; sourceTree = "<group>"; };
 		AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = albumDAO.swift; sourceTree = "<group>"; };
 		AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosAlbum.swift; sourceTree = "<group>"; };
+		AD9AC0BA1D2E65B200CD805A /* AdicionarPessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarPessoasViewController.swift; sourceTree = "<group>"; };
 		ADA682FE1D2B04F400496E47 /* Alziegit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alziegit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683011D2B04F400496E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA683031D2B04F400496E47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				ADA683031D2B04F400496E47 /* ViewController.swift */,
 				ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */,
 				ADC2C3521D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift */,
+				AD9AC0BA1D2E65B200CD805A /* AdicionarPessoasViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */,
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADC2C3531D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift in Sources */,
+				AD9AC0BB1D2E65B200CD805A /* AdicionarPessoasViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
 				ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */,

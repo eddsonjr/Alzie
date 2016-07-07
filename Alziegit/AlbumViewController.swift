@@ -12,9 +12,8 @@ class AlbumViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-       // navbar()
+        let alerta: UIAlertView = UIAlertView(title: "teste", message: "AlubmViewController ", delegate: self, cancelButtonTitle: "ok")
+        alerta.show()
     }
 
     override func didReceiveMemoryWarning() {

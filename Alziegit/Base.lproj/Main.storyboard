@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1932" y="324"/>
         </scene>
-        <!--Adicionar Pessoa-->
+        <!--Title-->
         <scene sceneID="zc4-On-lQm">
             <objects>
-                <viewController id="d05-qt-Ttv" sceneMemberID="viewController">
+                <viewController id="d05-qt-Ttv" customClass="AdicionarPessoasViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HRA-AR-O5m"/>
                         <viewControllerLayoutGuide type="bottom" id="coy-MY-BRz"/>
@@ -89,7 +89,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eD5-2p-K9P">
                                 <rect key="frame" x="0.0" y="64" width="246" height="655"/>
                                 <connections>
-                                    <segue destination="6h0-Mt-gtF" kind="embed" identifier="addPessoaSegue" id="02x-S1-nk5"/>
+                                    <segue destination="6h0-Mt-gtF" kind="embed" identifier="addPessoaSegueToContainer" id="02x-S1-nk5"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ug5-nU-Q1Q">
@@ -101,8 +101,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adicionar Pessoa" id="MjL-BV-gOt">
-                        <barButtonItem key="backBarButtonItem" title="Voltar" id="QPy-Pz-eRA"/>
+                    <navigationItem key="navigationItem" title="Title" id="kNL-H3-bcd">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="0yc-pJ-Xvs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="UjZ-eV-gHc">
+                            <connections>
+                                <action selector="salvarAlbumNavBTN:" destination="d05-qt-Ttv" id="QGN-V3-aPe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -151,13 +156,14 @@
         <scene sceneID="bch-p6-4d2">
             <objects>
                 <viewController id="6h0-Mt-gtF" customClass="AdicionarPessoaContainerControllerViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RMD-3E-pnQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="m5x-Id-L28"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="slU-XQ-2AK">
                         <rect key="frame" x="0.0" y="0.0" width="246" height="655"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-46-D9w">
-                                <rect key="frame" x="43" y="20" width="161" height="195"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Pessoa" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-nl-giX">
                                 <rect key="frame" x="20" y="223" width="206" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -197,18 +203,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pt-3R-Mvy">
-                                <rect key="frame" x="100" y="569" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prx-eV-B91">
+                                <rect key="frame" x="34" y="9" width="179" height="206"/>
+                                <state key="normal" title="Button" image="noImageIcon"/>
                                 <connections>
-                                    <action selector="testSendData:" destination="6h0-Mt-gtF" eventType="touchUpInside" id="zl0-SJ-Ycf"/>
+                                    <action selector="adicionarFotoPerfilPessoaAlbumBTN:" destination="6h0-Mt-gtF" eventType="touchUpInside" id="QRJ-eh-aP2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="imagemPessoaAdicionarImageView" destination="Xge-46-D9w" id="ObU-6J-Bb2"/>
+                        <outlet property="fotoPerfilAdicionarAlbumBTN" destination="Prx-eV-B91" id="GfF-oo-ZSg"/>
                         <outlet property="nomePessoaAdicionarTextEdit" destination="YL4-nl-giX" id="W7q-Ia-4wr"/>
                         <outlet property="notasPessoaAdicionarTextArea" destination="jg9-ZA-wDp" id="sIP-se-8dC"/>
                     </connections>
@@ -221,6 +227,10 @@
         <scene sceneID="A7g-S6-xLv">
             <objects>
                 <viewController id="fee-BJ-edZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iih-oW-MqF"/>
+                        <viewControllerLayoutGuide type="bottom" id="KmQ-cg-eN3"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vl0-tA-4n7">
                         <rect key="frame" x="0.0" y="0.0" width="534" height="305"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -181,3 +181,61 @@ if (controller.getViewID() == "algumacoisa"){
 
 
 
+
+
+
+
+
+
+
+
+
+
+@IBAction func salvarAlbumNavBTN(sender: AnyObject) {
+
+if(self.addPessoasContainer?.nomePessoaAdicionarTextEdit == nil || (self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text?.isEmpty)!){
+self.alerta = UIAlertView(title: "Atenção", message: "Você deve digitar um nome para a pessoa", delegate: self, cancelButtonTitle: "Ok")
+
+
+
+}else{
+print("Passou no iF do nome da pessoa vazio")
+self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
+
+self.nomeParenteNaoNulo = true
+
+}
+
+
+if(self.addPessoasContainer?.grauParetescoPessoaTextEdit == nil || (self.addPessoasContainer?.grauParetescoPessoaTextEdit.text?.isEmpty)!){
+
+self.alerta = UIAlertView(title: "Atenção", message: "Você deve digitar o grau de parentesco dessa pessoa com o paciente", delegate: self, cancelButtonTitle: "Ok")
+}else{
+
+self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
+
+self.grauParentescoNaoNulo = true
+}
+
+
+self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
+self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
+
+
+
+print("Dados salvos!")
+
+if (self.nomeParenteNaoNulo && self.grauParentescoNaoNulo) {
+self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
+self.alerta?.show()
+
+//agora salvando diretamente no banco
+DAO.salvarAlbum(self.album)
+
+}
+
+
+}
+
+
+

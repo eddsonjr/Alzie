@@ -169,6 +169,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="uWR-q3-6oq" kind="relationship" relationship="viewControllers" id="Hjo-0S-477"/>
+                        <segue destination="GDN-b1-0C6" kind="relationship" relationship="viewControllers" id="HI3-xx-txJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFM-PG-hwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,6 +194,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaB-qK-vuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-592" y="272"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="40L-4X-2IJ">
+            <objects>
+                <viewController id="GDN-b1-0C6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ePC-FN-p6U"/>
+                        <viewControllerLayoutGuide type="bottom" id="bDu-00-tbc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mws-bp-LZw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cu1-ZN-4DR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiO-x9-Vlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1476" y="1114"/>
         </scene>
         <!--Adicionar Pessoa Container Controller View Controller-->
         <scene sceneID="bch-p6-4d2">

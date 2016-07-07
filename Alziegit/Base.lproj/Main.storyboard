@@ -111,9 +111,6 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="qtAlbunsJaCriadosLabel" destination="Hle-zI-zoR" id="aiN-qR-pnj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mm-cE-ciW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

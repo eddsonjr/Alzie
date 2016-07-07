@@ -29,22 +29,6 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
-        // Do any additional setup after loading the view, typically from a nib
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
-//        layout.itemSize = CGSize(width: screenWidth / 3, height: screenWidth / 3)
-//        layout.minimumInteritemSpacing = 0
-//        layout.minimumLineSpacing = 0
-        
-//        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-////        collectionView!.dataSource = self
-////        collectionView!.delegate = self
-//        collectionView!.registerClass(MyCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-//        collectionView!.backgroundColor = UIColor.greenColor()
-      //  self.view.addSubview(collectionView!)
-    
-        //FIM
-        
     }
 
     override func didReceiveMemoryWarning() {

@@ -24,6 +24,9 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     
 
     
+    //variaveis para manipular o teclado
+    
+    
     
     //esta variavel define o controlador da tela onde o container esta alocado
     var addPessoasViewController : AdicionarPessoasViewController? = nil
@@ -31,6 +34,8 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //configurando o campo de texto para as notas 
+        self.notasPessoaAdicionarTextArea.textContainer.maximumNumberOfLines = 3
         
     }
 

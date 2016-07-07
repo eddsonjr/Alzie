@@ -23,6 +23,10 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var addPessoasContainer: AdicionarPessoaContainerControllerViewController? = nil
     
     
+    //variaveis do tipo Album, FotosAlbum e DAO
+    var album: AlbumEntes = AlbumEntes()
+    var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
+    var DAO: AlbumDAO = AlbumDAO()
     
     
 
@@ -63,8 +67,22 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     //botao de salvar localizado na navigation bar
     
-    
+    ///salva os dados do album e tambem da pessoa a quem o album referencia
     @IBAction func salvarAlbumNavBTN(sender: AnyObject) {
+        
+        //primeiramente populando o objeto Album
+        self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
+        self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
+        self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
+        self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
+        
+        //agora salvando diretamente no banco
+        DAO.salvarAlbum(self.album)
+        
+        print("Dados salvos!")
+        
+        var alerta: UIAlertView = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
+        
         
     }
     

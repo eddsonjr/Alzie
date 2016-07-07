@@ -214,7 +214,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dataAniversarioPessoaTextArea" destination="9X0-sd-7UY" id="ZGl-RN-FbV"/>
                         <outlet property="fotoPerfilAdicionarAlbumBTN" destination="Prx-eV-B91" id="GfF-oo-ZSg"/>
+                        <outlet property="grauParetescoPessoaTextEdit" destination="u1r-i7-teG" id="8IY-Mj-6Yr"/>
                         <outlet property="nomePessoaAdicionarTextEdit" destination="YL4-nl-giX" id="W7q-Ia-4wr"/>
                         <outlet property="notasPessoaAdicionarTextArea" destination="jg9-ZA-wDp" id="sIP-se-8dC"/>
                     </connections>

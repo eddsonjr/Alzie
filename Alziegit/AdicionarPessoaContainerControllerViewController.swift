@@ -15,11 +15,12 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     @IBOutlet weak var nomePessoaAdicionarTextEdit: UITextField!
     @IBOutlet weak var notasPessoaAdicionarTextArea: UITextView!
     @IBOutlet weak var fotoPerfilAdicionarAlbumBTN: UIButton!
-    
-    
+    @IBOutlet weak var dataAniversarioPessoaTextArea: UITextField!
+    @IBOutlet weak var grauParetescoPessoaTextEdit: UITextField!
     //variaveis de suporte
     var hasCam: Bool = UIImagePickerController.isSourceTypeAvailable(.Camera) //verifica se suporte a camera pelo dispositivo
-    var fotoTirada: UIImage?
+    var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
+    var fotoTiradaConvertidaNSDATA: NSData?
     
 
     
@@ -69,6 +70,11 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
         }else{
             let alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Seu dispositivo não tem suporte a câmera", delegate: self, cancelButtonTitle: "Ok")
             alerta.show()
+            
+            //SOMENTE PARA TESTES - VERIFICAR A RETIRADA DESTA LINHA APOS
+            self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
+            converterImagemParaNSDATA()
+            
         }
 
     }
@@ -77,8 +83,16 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
         self.fotoTirada = image
         self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
         self.dismissViewControllerAnimated(true, completion: nil);
+        converterImagemParaNSDATA()
     }
 
+    
+    ///converte a imagem do tipo UIImage para NSDATA
+    func converterImagemParaNSDATA() {
+        self.fotoTiradaConvertidaNSDATA = UIImagePNGRepresentation(self.fotoTirada)
+    }
+    
+    
  
    
     

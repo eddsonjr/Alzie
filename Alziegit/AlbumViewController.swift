@@ -10,10 +10,24 @@ import UIKit
 
 class AlbumViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var qtAlbunsJaCriadosLabel: UILabel!
+    
+    
+    
+    //variaveis do tipo Album e DAO
+    var album: AlbumEntes = AlbumEntes()
+    var DAO: AlbumDAO = AlbumDAO()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let alerta: UIAlertView = UIAlertView(title: "teste", message: "AlubmViewController ", delegate: self, cancelButtonTitle: "ok")
         alerta.show()
+        
+        
+        //mostrando a quantidade de albuns ja criadas no aplicativo
+        self.qtAlbunsJaCriadosLabel.text = String(DAO.retornarQuantidadeAlbunsNaBase())
     }
 
     override func didReceiveMemoryWarning() {

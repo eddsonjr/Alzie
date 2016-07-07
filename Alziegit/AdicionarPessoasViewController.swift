@@ -28,13 +28,24 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
     var DAO: AlbumDAO = AlbumDAO()
     
+    //variavel para alerta
+    var alerta: UIAlertView?
+    
+    
+        
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let alerta: UIAlertView = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
-        alerta.show()
+        self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
+        self.alerta!.show()
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AdicionarPessoasViewController.keyboardDidShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AdicionarPessoasViewController.keyboardDidHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
     }
 
@@ -81,12 +92,24 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         print("Dados salvos!")
         
-        var alerta: UIAlertView = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
+        self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
+        self.alerta?.show()
         
         
     }
     
     
+    
+    
+    
+    //funcao para manipuar o teclado
+    func keyboardDidShow(notifcation: NSNotification){
+        self.view.frame.origin.y = -210
+    }
+    
+    func keyboardDidHide(notification: NSNotification){
+        self.view.frame.origin.y = 0
+    }
     
     
 

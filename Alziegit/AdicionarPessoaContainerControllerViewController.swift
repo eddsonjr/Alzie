@@ -24,6 +24,9 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     
 
     
+    //variaveis para manipular o teclado
+    
+    
     
     //esta variavel define o controlador da tela onde o container esta alocado
     var addPessoasViewController : AdicionarPessoasViewController? = nil

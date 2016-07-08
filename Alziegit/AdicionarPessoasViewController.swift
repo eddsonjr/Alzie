@@ -18,7 +18,7 @@ import UIKit
 
 class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
-    
+    //variavies de views
     //esta variavel define o container de adicionar pessoas
     var addPessoasContainer: AdicionarPessoaContainerControllerViewController? = nil
     
@@ -28,11 +28,11 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
     var DAO: AlbumDAO = AlbumDAO()
     
-    //variavel para alerta
+    //variavel para alertas
     var alerta: UIAlertView?
+    var alertaAddFotoNoAlbum: UIAlertController?
     
-    
-    //variavel de suporte 
+    //variavel de suporte para saber se algum campo foi deixado em branco
     var nomeParenteNulo : Bool = false
     var grauParentescoNulo: Bool = false
     var fotoPerfilAlbumNulo: Bool = false
@@ -137,7 +137,33 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     
-    
+    //esta funcao permite adicionar fotos no album do ente que se quer salvar
+    @IBAction func addFotosNoAlbumBTN(sender: AnyObject) {
+        //preparando o alerta
+        self.alertaAddFotoNoAlbum = UIAlertController(title: "Adicionar Fotos no Álbum", message: "Você desesja adicionar fotos usando a câmera ou a galeria?", preferredStyle: .Alert)
+        
+        
+        //perapando os botoes para o alerta
+        //botao para acionar a camera
+        let cameraAlertaAddButton = UIAlertAction(title: "Câmera", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            print("camera escolhida")
+        }
+        let galeriaAlertaAddButton = UIAlertAction(title: "Galeria", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            print("galeria escolhida")
+        }
+        
+        //adicionando os botoes ao controlador
+        self.alertaAddFotoNoAlbum?.addAction(cameraAlertaAddButton)
+        self.alertaAddFotoNoAlbum?.addAction(galeriaAlertaAddButton)
+        
+        //mostrando o alerta na tela
+         self.presentViewController(alertaAddFotoNoAlbum!, animated: true, completion: nil)
+        
+        
+        
+    }
     
     //funcao para manipuar o teclado
     func keyboardDidShow(notifcation: NSNotification){
@@ -153,5 +179,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func converterImagemParaNSDATA() {
         self.fotoAvatarPadraoConvetidaNSDATA = UIImagePNGRepresentation(self.fotoAvatarPadrao)
     }
+    
+    
+    
+    
     
 }

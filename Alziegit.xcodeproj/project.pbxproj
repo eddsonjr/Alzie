@@ -22,6 +22,7 @@
 		ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */; };
 		ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683161D2B04F500496E47 /* AlziegitTests.swift */; };
 		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
+		ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */; };
 		ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3481D2D7AF000FECC5A /* Camera.swift */; };
 		ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */ = {isa = PBXBuildFile; fileRef = ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */; };
 		ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */; };
@@ -84,6 +85,7 @@
 		ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlziegitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683211D2B04F500496E47 /* AlziegitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitUITests.swift; sourceTree = "<group>"; };
 		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerFotosAlbumControllerView.swift; sourceTree = "<group>"; };
 		ADC2C3481D2D7AF000FECC5A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trechos_codigos_anotacoes; sourceTree = "<group>"; };
 		ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */,
 				ADC2C3521D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift */,
 				AD9AC0BA1D2E65B200CD805A /* AdicionarPessoasViewController.swift */,
+				ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
 				ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */,
+				ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

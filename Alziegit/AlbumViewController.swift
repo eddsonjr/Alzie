@@ -16,7 +16,6 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
-    
     //Variaveis do tipo Album e DAO
     var album: AlbumEntes = AlbumEntes()
     var DAO: AlbumDAO = AlbumDAO()
@@ -41,8 +40,6 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         }
     
     }
-    
-    
     override func viewDidLoad() {
         
         //TENTATIVA
@@ -50,18 +47,12 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         self.items = DAO.retornarQuantidadeAlbunsNaBase() //retorna a quantidade de itens na base
-       
-        
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     let reuserIdentifier  = "cell"
 //    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -107,12 +98,9 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     //implemente para quando uma celula for clicada
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.item)!")
+        print("Carregando fotos do album")
         
     }
-    
-
-    
-
 }
 
 

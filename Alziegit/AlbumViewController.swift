@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
@@ -16,21 +17,46 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     var screenHeight: CGFloat!
     
     
+    //Variaveis do tipo Album e DAO
+    var album: AlbumEntes = AlbumEntes()
+    var DAO: AlbumDAO = AlbumDAO()
+    
+    
+    //Serve para armazenar a quantidade de albums já criados
+    var items: Int = Int()
+    
+    //Serve para pegar uma lista de dados do album
+    var listaBanco: [AlbumEntes] {
+    
+        get {
+            var intlList = [AlbumEntes]()
+            
+            for album in AlbumDAO.listarTodosAlbuns(){
+                
+                intlList.append(album)
+                
+            }
+            return intlList
+
+        }
+    
+    }
+    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-       // let alerta: UIAlertView = UIAlertView(title: "teste", message: "AlubmViewController ", delegate: self, cancelButtonTitle: "ok")
-        //alerta.show()
-        
         
         //TENTATIVA
-        
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
+        self.items = DAO.retornarQuantidadeAlbunsNaBase() //retorna a quantidade de itens na base
+       
         
     }
-
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,28 +64,36 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     
     let reuserIdentifier  = "cell"
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    
-    
 //    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 //        return 1
 //    }
-    
+
+    //configura a quantiade de items salvos na base
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.items
     }
+    
+    
+    
+    //funcao que recarrega os dados da collection 
+    
+    
+    
     
     // make a cell for each cell index path
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
+        cell.NomeLabel.text = self.listaBanco[indexPath.item].NomeEnteLegenda
+        cell.backgroundColor = UIColor.whiteColor()
         
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.NomeLabel.text = self.items[indexPath.item]
-        cell.backgroundColor = UIColor.whiteColor()//make cell more visible in our examle project
+        let fotoAvatar: UIImage = UIImage(data:  self.listaBanco[indexPath.item].fotoAvatar!)!
+        cell.imagePessoa.image = fotoAvatar
+        
+        
+        
         
         //improving the cell
-        
         cell.layer.borderColor = UIColor.blackColor().CGColor
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 10
@@ -69,11 +103,10 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     
+    
+    //implemente para quando uma celula for clicada
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // handle tap avents
-        
         print("You selected cell #\(indexPath.item)!")
-        
         
     }
     
@@ -84,11 +117,11 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
 
 
 
+/*Classe que representa a celula da collectionView*/
 class MyCollectionViewCell: UICollectionViewCell{
     
     
     @IBOutlet var NomeLabel: UILabel!
-    
     @IBOutlet var imagePessoa: UIImageView!
     
     

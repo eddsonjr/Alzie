@@ -37,8 +37,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var grauParentescoNulo: Bool = false
     var fotoPerfilAlbumNulo: Bool = false
     
-    
-        
+    //variavel para trabalhar caso nao haja foto de perfil
+    let fotoAvatarPadrao : UIImage = UIImage(named: "personNoImage2")!
+    var fotoAvatarPadraoConvetidaNSDATA : NSData?
     
 
     override func viewDidLoad() {
@@ -83,20 +84,55 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     //botao de salvar localizado na navigation bar
-    
     ///salva os dados do album e tambem da pessoa a quem o album referencia
     @IBAction func salvarAlbumNavBTN(sender: AnyObject) {
-        self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
-        self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
-        self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
+       
+        //caso o usuario nao coloque o nome do ente
+        if(self.addPessoasContainer?.nomePessoaAdicionarTextEdit == nil || (self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text?.isEmpty)!){
+            print("Nome da pessoa que sera salva no album vazio... ")
+            self.nomeParenteNulo = true
+            
+        }
+        
+        //caso o usuario nao coloque o grau de parentesco
+        if(self.addPessoasContainer?.grauParetescoPessoaTextEdit == nil || (self.addPessoasContainer?.grauParetescoPessoaTextEdit.text?.isEmpty)!){
+            print("Grau de parentesco que sera salvo no banco vazio...")
+            self.grauParentescoNulo = true
+        }
+        
+        //caso nao haja foto de avatar no album, usar uma padrao
+        if((self.addPessoasContainer?.fotoTiradaConvertidaNSDATA) == nil){
+            print("Imagem Vazia ou camera indisponivel. Salvando foto padrao")
+            converterImagemParaNSDATA() //convertendo a imagem padrao para NSData
+            self.album.fotoAvatar = self.fotoAvatarPadraoConvetidaNSDATA
+        }else{
+            self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
+        }
+        
         self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
         
-        print("Dados salvos!")
-        self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
-        self.alerta?.show()
+        
+        
+        //verificando se ha possibilidade de salvar
+        if(self.grauParentescoNulo || self.nomeParenteNulo){ //nao pode deixar salvar
+            print("Ha dados nulos. Nao e possivel deixar salvar")
+            self.alerta = UIAlertView(title: "Atenção", message: "Faltou você registrar ou o nome ou grau de parentesco. Por favor, insira os dados para poder salvar o álbum", delegate: self, cancelButtonTitle: "Ok")
+            alerta?.show()
             
-        //agora salvando diretamente no banco
-        DAO.salvarAlbum(self.album)
+            self.nomeParenteNulo = false
+            self.grauParentescoNulo = false
+            
+        }else{
+            self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
+            self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
+            print("Dados salvos!")
+            self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
+            self.alerta?.show()
+            //agora salvando diretamente no banco
+            DAO.salvarAlbum(self.album)
+        }
+        
+        
     }
     
     
@@ -113,5 +149,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     }
     
     
-
+    //converte uma UIImage em um NSDATA
+    func converterImagemParaNSDATA() {
+        self.fotoAvatarPadraoConvetidaNSDATA = UIImagePNGRepresentation(self.fotoAvatarPadrao)
+    }
+    
 }

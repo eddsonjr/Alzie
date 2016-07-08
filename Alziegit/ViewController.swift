@@ -16,25 +16,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        let alerta: UIAlertView = UIAlertView(title: "teste", message: "ViewController.swift ", delegate: self, cancelButtonTitle: "ok")
-//        alerta.show()
-    
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-    /*METODOS PARA MANIPULAR O ALBUM E AS FOTOS DO ALBUM*/
-    
-    func SalvarAlbum(){
-    }
-    
     
     
 }

@@ -15,13 +15,15 @@ import RealmSwift
 class  AlbumDAO {
     
     //instancia do banco de dados
-    let realm = try! Realm()
+    
     
 
     /*Operacoes sobre os albuns*/
     
     ///salva os dados de um Album no banco de dados. Depois disso é necessário salvar as fotos no album
     func salvarAlbum(album: AlbumEntes){
+        let realm = try! Realm()
+        
         try! realm.write{
             realm.add(album)
             try! realm.commitWrite()
@@ -30,19 +32,24 @@ class  AlbumDAO {
     
 
     ///Retorna todos os albuns criados. Retornar um Results<AlbumEntes>
-    func listarTodosAlbuns() -> Results<AlbumEntes> {
-       var albuns = realm.objects(AlbumEntes.self)
-       return albuns
+    class func listarTodosAlbuns() -> Results<AlbumEntes> {
+        let realm = try! Realm()
+        
+        let albuns = realm.objects(AlbumEntes.self)
+        return albuns
     }
     
     
     ///retorna a quantidade de albuns criados ate o momento
     func retornarQuantidadeAlbunsNaBase() -> Int{
+        
+        let realm = try! Realm()
         return realm.objects(AlbumEntes).count
     }
     
     ///apaga um determinado album
     func apagarAlbum(album: AlbumEntes){
+        let realm = try! Realm()
         realm.delete(album)
     }
     
@@ -57,6 +64,7 @@ class  AlbumDAO {
     
     ///salva uma foto em um determinado album. Ao salvar a foto, é necessario especificar o dono do album
     func salvarFotoNoAlbum(foto: FotosDoAlbum){
+        let realm = try! Realm()
         try! realm.write{
             realm.add(foto)
             try! realm.commitWrite()
@@ -67,13 +75,15 @@ class  AlbumDAO {
     
     ///retorna todas as fotos que estao naquele album
     func listarTodasFotos() -> Results<FotosDoAlbum> {
-        var fotos = realm.objects(FotosDoAlbum.self)
+        let realm = try! Realm()
+        let fotos = realm.objects(FotosDoAlbum.self)
         return fotos
     }
     
     
     ///apaga uma determinada foto daquele album
     func apagarFoto(foto: FotosDoAlbum){
+        let realm = try! Realm()
         realm.delete(foto)
     }
     

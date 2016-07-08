@@ -22,6 +22,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //esta variavel define o container de adicionar pessoas
     var addPessoasContainer: AdicionarPessoaContainerControllerViewController? = nil
     
+
     
     //variaveis do tipo Album, FotosAlbum e DAO
     var album: AlbumEntes = AlbumEntes()

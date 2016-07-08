@@ -26,7 +26,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //Serve para pegar uma lista de dados do album
     var listaBanco: [AlbumEntes] {
-    
+        
         get {
             var intlList = [AlbumEntes]()
             
@@ -36,10 +36,13 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
                 
             }
             return intlList
-
+            
         }
-    
+        
     }
+
+    
+    
     override func viewDidLoad() {
         
         //TENTATIVA
@@ -47,7 +50,32 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         self.items = DAO.retornarQuantidadeAlbunsNaBase() //retorna a quantidade de itens na base
+        print("\(self.items)")
+        print("Vetor com objetos: \(self.listaBanco.count)")
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+//        let alertaTest: UIAlertView = UIAlertView(title: "Teste", message: "Testando o viewWillAppears", delegate: self, cancelButtonTitle: "ok")
+//        
+//        alertaTest.show()
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            self.items = self.DAO.retornarQuantidadeAlbunsNaBase()
+            print("\(self.items)")
+            print("Vetor com objetos: \(self.listaBanco.count)")
+            
+            //self.collectionView?.collectionViewLayout.invalidateLayout()
+            self.collectionView?.reloadData()
+            //self.collectionView?.collectionViewLayout.prepareLayout()
+            
+           
+        })
+       
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,15 +102,15 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     // make a cell for each cell index path
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
-        cell.NomeLabel.text = self.listaBanco[indexPath.item].NomeEnteLegenda
+
+        
+         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
+        
+        
+        cell.NomeLabel.text = listaBanco[indexPath.item].NomeEnteLegenda
         cell.backgroundColor = UIColor.whiteColor()
-        
-        let fotoAvatar: UIImage = UIImage(data:  self.listaBanco[indexPath.item].fotoAvatar!)!
+        let fotoAvatar: UIImage = UIImage(data:  listaBanco[indexPath.item].fotoAvatar!)!
         cell.imagePessoa.image = fotoAvatar
-        
-        
-        
         
         //improving the cell
         cell.layer.borderColor = UIColor.blackColor().CGColor
@@ -94,6 +122,8 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     
+    
+
     
     //implemente para quando uma celula for clicada
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

@@ -22,7 +22,14 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //esta variavel define o container de adicionar pessoas
     var addPessoasContainer: AdicionarPessoaContainerControllerViewController? = nil
     
-
+    
+    
+    //Esta variavel serve para manipular a collectionView
+    @IBOutlet weak var addFotosCollectionView: UICollectionView!
+    
+    
+    //variavel que reperesnta a controladora da collectionView
+    var CV: AddFotosAlbumCollectionViewController = AddFotosAlbumCollectionViewController()
     
     //variaveis do tipo Album, FotosAlbum e DAO
     var album: AlbumEntes = AlbumEntes()
@@ -41,6 +48,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //variavel para trabalhar caso nao haja foto de perfil
     let fotoAvatarPadrao : UIImage = UIImage(named: "personNoImage2")!
     var fotoAvatarPadraoConvetidaNSDATA : NSData?
+    var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
+
     
 
     override func viewDidLoad() {
@@ -149,10 +158,16 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         let cameraAlertaAddButton = UIAlertAction(title: "Câmera", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("camera escolhida")
+            self.tirarFoto()
+        
+            
         }
         let galeriaAlertaAddButton = UIAlertAction(title: "Galeria", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("galeria escolhida")
+            self.pegarFotoGaleria()
+            self.CV.fotoParaCell = self.fotoTirada
+            self.addFotosCollectionView.reloadData()
         }
         
         //adicionando os botoes ao controlador
@@ -182,6 +197,40 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     }
     
     
+    
+    //Abaixo estao duas funcoes para bater foto
+    func tirarFoto() {
+         var hasCam: Bool = UIImagePickerController.isSourceTypeAvailable(.Camera)
+        if hasCam {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }else{
+            let alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Seu dispositivo não tem suporte a câmera", delegate: self, cancelButtonTitle: "Ok")
+            alerta.show()
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        self.fotoTirada = image
+        self.dismissViewControllerAnimated(true, completion: nil);
+        converterImagemParaNSDATA()
+    }
+    
+    
+    //pegar uma foto da galeria
+    func pegarFotoGaleria(){
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imagePicker.allowsEditing = true
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    
+    }
     
     
     

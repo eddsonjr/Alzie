@@ -15,11 +15,14 @@ class AddFotosAlbumCollectionViewController: UIViewController,UICollectionViewDe
     let reuserIdentifier  = "addFotoColecoVCell"
 
     
+    //variavel do tipo imagem que representa a imagem da celula
+    var fotoParaCell: UIImage?
+    
     //variaveis de deimensoes
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
-    
+
     
     
     override func viewDidLoad() {
@@ -30,14 +33,15 @@ class AddFotosAlbumCollectionViewController: UIViewController,UICollectionViewDe
         screenWidth = screenSize.width
         screenHeight = screenSize.height
 
-        
-    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
 
     /*
@@ -54,12 +58,13 @@ class AddFotosAlbumCollectionViewController: UIViewController,UICollectionViewDe
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
      func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! addFotoCVCell
         
         //configurando as dimensoes da celula
         cell.layer.borderColor = UIColor.blackColor().CGColor
@@ -68,10 +73,14 @@ class AddFotosAlbumCollectionViewController: UIViewController,UICollectionViewDe
         cell.frame.size.width = screenWidth / 4.3
         cell.frame.size.height = screenWidth / 4.3
         
+        
+        //configurando os elementos que irao aparecer na celula
+        cell.fotoAddCell.image = fotoParaCell
+        cell.labelFotoAddCell.text = "Teste"
+
         return cell
     }
-    
-    
+   
 }
 
 
@@ -80,6 +89,9 @@ class AddFotosAlbumCollectionViewController: UIViewController,UICollectionViewDe
 
 /*Implementando uma classe que herda as caracteristicas da celula*/
 class addFotoCVCell: UICollectionViewCell{
+    
+    @IBOutlet weak var fotoAddCell: UIImageView!
+    @IBOutlet weak var labelFotoAddCell: UILabel!
     
 }
 

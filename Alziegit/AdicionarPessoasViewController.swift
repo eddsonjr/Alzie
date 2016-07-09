@@ -227,7 +227,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         self.fotoTirada = image
         self.listaImagensCelula.append(image)
         self.dismissViewControllerAnimated(true, completion:{
-            self.atualizarCollectionView()
+            self.atualizarCollectionView("add")
             self.converterImagemParaNSDATA()
         });
        
@@ -256,25 +256,41 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! celula
-        
         cell.celulaImageView.image = self.listaImagensCelula[indexPath.row]
-        
         return cell
     }
     
     //metodo para realizar alguma funcao quando umas das celulas é clicada
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Celula clicada: \(indexPath.row)")
+        self.listaImagensCelula.removeAtIndex(indexPath.row)
+        atualizarCollectionView("delete")
     }
 
     
     //este metodo serve para atualizar os dados dentro da collectionView
-    func atualizarCollectionView(){
-        self.collectionView.performBatchUpdates({
-            self.collectionView.insertItemsAtIndexPaths([NSIndexPath(forItem: self.collectionView.visibleCells().count, inSection: 0)])
-            self.qtCells++
-            self.collectionView.reloadData()
-            }, completion: nil)
+    func atualizarCollectionView(operacao: String){
+        
+        switch operacao {
+        case "add":
+            self.collectionView.performBatchUpdates({
+                self.collectionView.insertItemsAtIndexPaths([NSIndexPath(forItem: self.collectionView.visibleCells().count, inSection: 0)])
+                self.qtCells++
+                self.collectionView.reloadData()
+                }, completion: nil)
+        case "delete":
+            self.collectionView.performBatchUpdates({
+                self.collectionView.deleteItemsAtIndexPaths([NSIndexPath(forItem: self.collectionView.visibleCells().count, inSection: 0)])
+                self.qtCells--
+                self.collectionView.reloadData()
+                }, completion: nil)
+            
+            
+            
+        default: break
+            print("Selecione uma das seguintes opcoes: delete ou add")
+        }
+        
     }
 
     

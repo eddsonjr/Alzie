@@ -178,42 +178,45 @@
                                     <action selector="addFotosNoAlbumBTN:" destination="d05-qt-Ttv" eventType="touchUpInside" id="Snt-Yh-azU"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQk-rY-83O">
-                                <rect key="frame" x="259" y="72" width="745" height="601"/>
-                                <color key="backgroundColor" red="0.67000001669999998" green="0.67000001669999998" blue="0.67000001669999998" alpha="1" colorSpace="deviceRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cTU-Dr-Or4">
-                                    <size key="itemSize" width="257" height="215"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-fr-Tc9">
+                                <rect key="frame" x="254" y="72" width="750" height="601"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QaU-Sa-Lk1">
+                                    <size key="itemSize" width="175" height="197"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addFotoColecoVCell" id="27j-fH-7ra" customClass="addFotoCVCell" customModule="Alziegit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="257" height="215"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Bya-iZ-YOE" customClass="celula" customModule="Alziegit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="257" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label de Testes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25X-Qd-NEI">
-                                                    <rect key="frame" x="14" y="186" width="235" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-hL-pFu">
+                                                    <rect key="frame" x="8" y="165" width="159" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2T-NQ-l5Y">
-                                                    <rect key="frame" x="9" y="8" width="240" height="150"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-aq-RIE">
+                                                    <rect key="frame" x="8" y="8" width="157" height="134"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="fotoAddCell" destination="C2T-NQ-l5Y" id="jh6-yU-xbM"/>
-                                            <outlet property="labelFotoAddCell" destination="25X-Qd-NEI" id="bcU-d9-4Mi"/>
-                                            <outlet property="legendaFotoAddAlbumVCCell" destination="25X-Qd-NEI" id="ZAg-FC-C2R"/>
+                                            <outlet property="celulaImageView" destination="1HG-aq-RIE" id="IZ9-Jd-eK0"/>
+                                            <outlet property="celulaLegendaLabel" destination="Uoa-hL-pFu" id="QsU-RT-jNi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="d05-qt-Ttv" id="9BA-xU-c7z"/>
+                                    <outlet property="delegate" destination="d05-qt-Ttv" id="WaM-UW-zTC"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,7 +232,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="addFotosCollectionView" destination="NQk-rY-83O" id="0NW-fN-cWP"/>
+                        <outlet property="collectionView" destination="uOp-fr-Tc9" id="2fO-5h-Afx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7L-9u-ikv" userLabel="First Responder" sceneMemberID="firstResponder"/>

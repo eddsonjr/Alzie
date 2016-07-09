@@ -16,7 +16,7 @@
 
 import UIKit
 
-class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     //variavies de views
     //esta variavel define o container de adicionar pessoas
@@ -24,12 +24,17 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     
-    //Esta variavel serve para manipular a collectionView
-    @IBOutlet weak var addFotosCollectionView: UICollectionView!
-    
-    
-    //variavel que reperesnta a controladora da collectionView
-    var CV: AddFotosAlbumCollectionViewController = AddFotosAlbumCollectionViewController()
+    //variaveis para manipular a collectionView
+    @IBOutlet weak var collectionView: UICollectionView!
+    let reuserIdentifier  = "cell"
+    var qtCells = 0 //quantidade de celulas na collectionview
+    var listaImagensCelula : [UIImage] = [] //ira armazenar as fotos tiradas ou pegas da galeria que irao para a collectionview
+
+    //variaveis de deimensoes - servem para manipular o tamanho das celulas
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+
     
     //variaveis do tipo Album, FotosAlbum e DAO
     var album: AlbumEntes = AlbumEntes()
@@ -54,6 +59,11 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        screenSize = UIScreen.mainScreen().bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
         
         self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
         self.alerta!.show()
@@ -166,8 +176,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             UIAlertAction in
             print("galeria escolhida")
             self.pegarFotoGaleria()
-            self.CV.fotoParaCell = self.fotoTirada
-            self.addFotosCollectionView.reloadData()
+           
         }
         
         //adicionando os botoes ao controlador
@@ -213,10 +222,15 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }
     }
     
+    //controladora de imagens
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.fotoTirada = image
-        self.dismissViewControllerAnimated(true, completion: nil);
-        converterImagemParaNSDATA()
+        self.listaImagensCelula.append(image)
+        self.dismissViewControllerAnimated(true, completion:{
+            self.atualizarCollectionView()
+            self.converterImagemParaNSDATA()
+        });
+       
     }
     
     
@@ -234,4 +248,61 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     
+    /*Os metodos abaixo servem para manipular a collectionView*/
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.qtCells
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! celula
+        
+        cell.celulaImageView.image = self.listaImagensCelula[indexPath.row]
+        
+        return cell
+    }
+    
+    //metodo para realizar alguma funcao quando umas das celulas é clicada
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("Celula clicada: \(indexPath.row)")
+    }
+
+    
+    //este metodo serve para atualizar os dados dentro da collectionView
+    func atualizarCollectionView(){
+        self.collectionView.performBatchUpdates({
+            self.collectionView.insertItemsAtIndexPaths([NSIndexPath(forItem: self.collectionView.visibleCells().count, inSection: 0)])
+            self.qtCells++
+            self.collectionView.reloadData()
+            }, completion: nil)
+    }
+
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+/*Abaixo esta a classe que represnta as celulas da collectionView*/
+/*Implementando uma classe que herda as caracteristicas da celula*/
+class celula: UICollectionViewCell {
+    
+    @IBOutlet weak var celulaLegendaLabel: UILabel!
+    @IBOutlet weak var celulaImageView: UIImageView!
+    
+}
+
+
+
+
+
+
+
+

@@ -25,6 +25,8 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     var items: Int = Int()
     
     //Serve para pegar uma lista de dados do album
+    
+  
     var listaBanco: [AlbumEntes] {
         
         get {
@@ -54,6 +56,20 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         print("Vetor com objetos: \(self.listaBanco.count)")
     }
     
+    
+    override func viewDidAppear(animated: Bool) {
+        
+                        print("\(self.items)")
+            print("Vetor com objetos: \(self.listaBanco.count)")
+            
+            self.collectionView?.collectionViewLayout.invalidateLayout()
+            self.collectionView?.collectionViewLayout.prepareLayout()
+
+            self.collectionView?.reloadData()
+            
+      
+
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -89,7 +105,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     //configura a quantiade de items salvos na base
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items
+        return self.listaBanco .count
     }
     
     

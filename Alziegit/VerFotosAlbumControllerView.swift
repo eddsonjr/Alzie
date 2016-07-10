@@ -5,7 +5,8 @@
 //  Created by Edson  Jr on 07/07/16.
 //  Copyright © 2016 Edson  Jr. All rights reserved.
 //
-//  Esta classe permite que você visualize fotos dos albums criados
+//  Esta classe permite que você visualize fotos dos albums criados. 
+// 
 //
 
 import UIKit

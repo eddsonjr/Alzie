@@ -49,6 +49,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var nomeParenteNulo : Bool = false
     var grauParentescoNulo: Bool = false
     var fotoPerfilAlbumNulo: Bool = false
+    var fotosNulo: Bool = false
     
     //variavel para trabalhar caso nao haja foto de perfil
     let fotoAvatarPadrao : UIImage = UIImage(named: "personNoImage2")!
@@ -106,7 +107,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //botao de salvar localizado na navigation bar
     ///salva os dados do album e tambem da pessoa a quem o album referencia
     @IBAction func salvarAlbumNavBTN(sender: AnyObject) {
-       
+        
+    
         //caso o usuario nao coloque o nome do ente
         if(self.addPessoasContainer?.nomePessoaAdicionarTextEdit == nil || (self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text?.isEmpty)!){
             print("Nome da pessoa que sera salva no album vazio... ")
@@ -131,12 +133,10 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
         
-        
-        
         //verificando se ha possibilidade de salvar
-        if(self.grauParentescoNulo || self.nomeParenteNulo){ //nao pode deixar salvar
+        if(self.grauParentescoNulo || self.nomeParenteNulo || self.fotosNulo){ //nao pode deixar salvar
             print("Ha dados nulos. Nao e possivel deixar salvar")
-            self.alerta = UIAlertView(title: "Atenção", message: "Faltou você registrar ou o nome ou grau de parentesco. Por favor, insira os dados para poder salvar o álbum", delegate: self, cancelButtonTitle: "Ok")
+            self.alerta = UIAlertView(title: "Atenção", message: "Faltou você registrar ou o nome ou grau de parentesco ou então adicionar alguma foto ao álbum. Por favor, insira os dados para poder salvar o álbum", delegate: self, cancelButtonTitle: "Ok")
             alerta?.show()
             
             self.nomeParenteNulo = false
@@ -292,12 +292,6 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }
         
     }
-
-    
-    
-    
-    
-    
 }
 
 

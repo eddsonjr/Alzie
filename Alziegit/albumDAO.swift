@@ -48,7 +48,7 @@ class  AlbumDAO {
     }
     
     ///apaga um determinado album
-    func apagarAlbum(album: AlbumEntes){
+    class func apagarAlbum(album: AlbumEntes){
         let realm = try! Realm()
         realm.delete(album)
     }
@@ -63,7 +63,7 @@ class  AlbumDAO {
     
     
     ///salva uma foto em um determinado album. Ao salvar a foto, é necessario especificar o dono do album
-    func salvarFotoNoAlbum(foto: FotosDoAlbum){
+    class func salvarFotoNoAlbum(foto: FotosDoAlbum){
         let realm = try! Realm()
         try! realm.write{
             realm.add(foto)
@@ -73,16 +73,25 @@ class  AlbumDAO {
 
     
     
-    ///retorna todas as fotos que estao naquele album
-    func listarTodasFotos() -> Results<FotosDoAlbum> {
+    ///retorna todas as fotos salvas no banco
+    class func listarTodasFotos() -> Results<FotosDoAlbum> {
         let realm = try! Realm()
         let fotos = realm.objects(FotosDoAlbum.self)
         return fotos
     }
     
     
+    
+    ///retorna todas as fotos de acordo com o album
+    class func listarTodasFotos(nomeEnte: String,ente: AlbumEntes) ->Results<FotosDoAlbum>{
+        let realm = try! Realm()
+        let predicado: NSPredicate = NSPredicate(value: ente.NomeEnteLegenda == nomeEnte)
+        let fotos = realm.objects(FotosDoAlbum.self).filter(predicado)
+        return fotos
+    }
+    
     ///apaga uma determinada foto daquele album
-    func apagarFoto(foto: FotosDoAlbum){
+    class func apagarFoto(foto: FotosDoAlbum){
         let realm = try! Realm()
         realm.delete(foto)
     }

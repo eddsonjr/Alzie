@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="1932" y="324"/>
         </scene>
-        <!--View Controller-->
+        <!--Ver Fotos Album Controller View-->
         <scene sceneID="lvE-gT-CKh">
             <objects>
-                <viewController id="lVr-Lj-wlG" sceneMemberID="viewController">
+                <viewController id="lVr-Lj-wlG" customClass="VerFotosAlbumControllerView" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gix-E4-VR1"/>
                         <viewControllerLayoutGuide type="bottom" id="qVe-we-iOk"/>
@@ -135,10 +135,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personNoImage2" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-fK-eR0">
+                                <rect key="frame" x="162" y="123" width="662" height="337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legenda Foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-vT-j4E">
+                                <rect key="frame" x="441" y="468" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="fotoDoAlbumImageView" destination="OBK-fK-eR0" id="bds-eG-YJI"/>
+                        <outlet property="legendaFotoLabel" destination="rMs-vT-j4E" id="47O-hM-1Qr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhK-gf-DsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,5 +355,6 @@
     </scenes>
     <resources>
         <image name="noImageIcon" width="418" height="455"/>
+        <image name="personNoImage2" width="150" height="150"/>
     </resources>
 </document>

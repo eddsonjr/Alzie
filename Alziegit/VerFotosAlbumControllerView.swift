@@ -13,26 +13,31 @@ import UIKit
 
 class VerFotosAlbumControllerView: UIViewController {
 
+    
+    //nome da segue para esta controladora: verFotosDoAlbum
+    
+    @IBOutlet weak var fotoDoAlbumImageView: UIImageView!
+    @IBOutlet weak var legendaFotoLabel: UILabel!
+    
+    
+    //adicionando um objeto dao e um objeto do tipo fotosAlbum
+    var fotosEnte : AlbumEntes = AlbumEntes()
+    var DAO: AlbumDAO = AlbumDAO()
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

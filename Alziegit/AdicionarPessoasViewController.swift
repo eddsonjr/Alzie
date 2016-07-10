@@ -55,7 +55,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     let fotoAvatarPadrao : UIImage = UIImage(named: "personNoImage2")!
     var fotoAvatarPadraoConvetidaNSDATA : NSData?
     var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
-
+    var fotoParaAlbumConvertidaNSDATA: NSData?
     
 
     override func viewDidLoad() {
@@ -125,7 +125,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         //caso nao haja foto de avatar no album, usar uma padrao
         if((self.addPessoasContainer?.fotoTiradaConvertidaNSDATA) == nil){
             print("Imagem Vazia ou camera indisponivel. Salvando foto padrao")
-            converterImagemParaNSDATA() //convertendo a imagem padrao para NSData
+            //convertendo a imagem padrao para NSData
+            self.fotoAvatarPadraoConvetidaNSDATA = converterImagemParaNSDATA(self.fotoAvatarPadrao)
             self.album.fotoAvatar = self.fotoAvatarPadraoConvetidaNSDATA
         }else{
             self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
@@ -201,8 +202,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     //converte uma UIImage em um NSDATA
-    func converterImagemParaNSDATA() {
-        self.fotoAvatarPadraoConvetidaNSDATA = UIImagePNGRepresentation(self.fotoAvatarPadrao)
+    func converterImagemParaNSDATA(imagem: UIImage) -> NSData {
+        //self.fotoAvatarPadraoConvetidaNSDATA = UIImagePNGRepresentation(self.fotoAvatarPadrao)
+        return UIImagePNGRepresentation(imagem)!
     }
     
     
@@ -229,7 +231,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         self.dismissViewControllerAnimated(true, completion:{
             self.atualizarCollectionView("add")
             self.colocarLegendaNaFoto()
-            self.converterImagemParaNSDATA()
+            self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
         });
        
     }

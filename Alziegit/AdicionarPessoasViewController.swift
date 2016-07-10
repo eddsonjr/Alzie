@@ -228,6 +228,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         self.listaImagensCelula.append(image)
         self.dismissViewControllerAnimated(true, completion:{
             self.atualizarCollectionView("add")
+            self.colocarLegendaNaFoto()
             self.converterImagemParaNSDATA()
         });
        
@@ -245,6 +246,45 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }
     
     }
+    
+    
+    
+    //funcao para permitir colocar uma legenda na foto assim que ela for registrada
+    func colocarLegendaNaFoto(){
+        print("Tentando inserir legenda...")
+        var legendaInserida: String = ""
+        let alertaLegenda: UIAlertController = UIAlertController(title: "Adicionar Legenda a foto", message: "Você pode adicionar uma legenda a sua foto caso queira.", preferredStyle: .Alert)
+        
+        //adicionado o text field e o button neste alerta
+        alertaLegenda.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.placeholder = "Insira uma legenda, caso queira"
+            legendaInserida = textField.text!
+        })
+        
+        
+        //adicionando os botoes
+        let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            print("Salvando legenda...")
+        }
+        
+        let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            print("Descartando legenda...")
+            legendaInserida = ""
+        }
+        
+        
+        alertaLegenda.addAction(salvarLegendaButton)
+        alertaLegenda.addAction(descartarLegenda)
+        
+        
+        //mostrando na tela o alerta
+        self.presentViewController(alertaLegenda, animated: true, completion: nil)
+        
+    }
+    
+    
     
     
     

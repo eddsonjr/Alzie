@@ -18,6 +18,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //Variaveis do tipo Album e DAO
     var album: AlbumEntes = AlbumEntes()
+    var albumClicado: AlbumEntes = AlbumEntes()
     var DAO: AlbumDAO = AlbumDAO()
     
     
@@ -66,6 +67,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
             self.collectionView?.collectionViewLayout.prepareLayout()
 
             self.collectionView?.reloadData()
+            
             
       
 
@@ -145,9 +147,24 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.item)!")
         print("Carregando fotos do album")
-        
+        self.albumClicado = listaBanco[indexPath.row]
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "verFotosDoAlbum"{
+            if let verFotosAlbumCV = segue.destinationViewController as? VerFotosAlbumControllerView{
+                verFotosAlbumCV.albumDoEnte = self.albumClicado
+            }
+        }
+    }
+    
 }
+
+
+
+
+
 
 
 

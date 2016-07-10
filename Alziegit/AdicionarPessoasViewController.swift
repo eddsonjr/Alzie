@@ -177,6 +177,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             UIAlertAction in
             print("galeria escolhida")
             self.pegarFotoGaleria()
+            
            
         }
         
@@ -232,6 +233,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             self.atualizarCollectionView("add")
             self.colocarLegendaNaFoto()
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
+            self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
         });
        
     }
@@ -268,12 +270,14 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("Salvando legenda...")
+            self.fotosDoAlbum.legendaDaFoto = legendaInserida
         }
         
         let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("Descartando legenda...")
             legendaInserida = ""
+            self.fotosDoAlbum.legendaDaFoto = legendaInserida
         }
         
         

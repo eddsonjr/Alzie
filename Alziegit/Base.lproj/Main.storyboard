@@ -138,7 +138,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personNoImage2" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-fK-eR0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personNoImage" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-fK-eR0">
                                 <rect key="frame" x="162" y="123" width="662" height="337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legenda Foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-vT-j4E">
@@ -371,6 +371,6 @@
     </scenes>
     <resources>
         <image name="noImageIcon" width="418" height="455"/>
-        <image name="personNoImage2" width="150" height="150"/>
+        <image name="personNoImage" width="299" height="267"/>
     </resources>
 </document>

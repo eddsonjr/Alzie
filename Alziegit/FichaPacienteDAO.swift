@@ -35,10 +35,5 @@ class FichaPacienteDAO {
         let paciente = realm.objects(FichaDoPaciente.self)
         return paciente
     }
-
-    
-    
-    
-    
     
 }

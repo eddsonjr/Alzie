@@ -79,6 +79,11 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        print("Em viewDidAppear")
+     
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -148,20 +153,16 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }else{
             self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
             self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
-            
-            
-            self.fotosDoAlbum.legendaDaFoto = "Testando..."
-            self.fotosDoAlbum.foto = converterImagemParaNSDATA(self.fotoAvatarPadrao)
+
             
             self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
-            print("Teste: \(self.album.listaFotosDoAlbum[0].legendaDaFoto)")
-            
             
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
             //agora salvando diretamente no banco
             DAO.salvarAlbum(self.album)
             print("Dados salvos!")
+            
             
         }
         
@@ -242,10 +243,11 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         self.fotoTirada = image
         self.listaImagensCelula.append(image)
         self.dismissViewControllerAnimated(true, completion:{
-            self.atualizarCollectionView("add")
             self.colocarLegendaNaFoto()
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
             self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
+            self.atualizarCollectionView("add")
+            self.atualizarListaFotos()
         });
        
     }
@@ -309,6 +311,22 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     }
     
     
+    //atualiza a lista de fotos a ser salva no banco
+    func atualizarListaFotos(){
+        print("atualizando lista de fotos para o banco...")
+        if  qtCells > 0 {
+            self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+        }
+    }
+    
+    func removerDaListaDeFotos(index: Int){
+        print("Removendo lista de fotos para o banco...")
+        if qtCells >= 0 {
+            self.album.listaFotosDoAlbum.removeAtIndex(index)
+        }
+    }
+    
+    
     
     
     
@@ -328,6 +346,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Celula clicada: \(indexPath.row)")
         self.listaImagensCelula.removeAtIndex(indexPath.row)
+        removerDaListaDeFotos(indexPath.row)
         atualizarCollectionView("delete")
     }
 

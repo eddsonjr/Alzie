@@ -29,7 +29,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
   
     var listaBanco: [AlbumEntes] {
-        
+   
         get {
             var intlList = [AlbumEntes]()
             
@@ -148,14 +148,17 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         print("You selected cell #\(indexPath.item)!")
         print("Carregando fotos do album")
         self.albumClicado = listaBanco[indexPath.row]
+        
+        print("Qt. lista de fotos do album clicado nesta celula: \(listaBanco[indexPath.row].listaFotosDoAlbum.count)")
+        
+        print("Nome do ente clicado: \(self.albumClicado.NomeEnteLegenda)")
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "verFotosDoAlbum"{
-            if let verFotosAlbumCV = segue.destinationViewController as? VerFotosAlbumControllerView{
-                verFotosAlbumCV.albumDoEnte = self.albumClicado
-            }
+            var svc = segue.destinationViewController as? VerFotosAlbumControllerView
+            svc?.albumDoEnte = self.albumClicado
         }
     }
     

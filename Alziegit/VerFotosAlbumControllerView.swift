@@ -21,13 +21,12 @@ class VerFotosAlbumControllerView: UIViewController {
     @IBOutlet weak var qtFotosNoAlbumLabel: UILabel!
     
     //adicionando um objeto dao e um objeto do tipo fotosAlbum
-    var albumDoEnte : AlbumEntes = AlbumEntes()
+    var albumDoEnte : AlbumEntes?
     var DAO: AlbumDAO = AlbumDAO()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(albumDoEnte.listaFotosDoAlbum.count)")
-        qtFotosNoAlbumLabel.text = String(albumDoEnte.listaFotosDoAlbum.count)
+        
     }
 
     override func didReceiveMemoryWarning() {

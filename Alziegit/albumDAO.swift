@@ -48,7 +48,7 @@ class  AlbumDAO {
     }
     
     ///apaga um determinado album
-    class func apagarAlbum(album: AlbumEntes){
+    func apagarAlbum(album: AlbumEntes){
         let realm = try! Realm()
         realm.delete(album)
     }

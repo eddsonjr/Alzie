@@ -29,6 +29,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     let reuserIdentifier  = "cell"
     var qtCells = 0 //quantidade de celulas na collectionview
     var listaImagensCelula : [UIImage] = [] //ira armazenar as fotos tiradas ou pegas da galeria que irao para a collectionview
+    
 
     //variaveis de deimensoes - servem para manipular o tamanho das celulas
     var screenSize: CGRect!
@@ -153,9 +154,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }else{
             self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
             self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
-
             
-            self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+            
+            //self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
             
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
@@ -245,9 +246,10 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         self.dismissViewControllerAnimated(true, completion:{
             self.colocarLegendaNaFoto()
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
-            self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
             self.atualizarCollectionView("add")
+            self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
             self.atualizarListaFotos()
+          
         });
        
     }
@@ -314,7 +316,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //atualiza a lista de fotos a ser salva no banco
     func atualizarListaFotos(){
         print("atualizando lista de fotos para o banco...")
-        if  qtCells > 0 {
+        if  qtCells >= 0 {
             self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
         }
     }

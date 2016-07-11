@@ -112,6 +112,9 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="collectionTela" destination="7T0-jD-V9a" id="cSp-hm-SaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mm-cE-ciW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

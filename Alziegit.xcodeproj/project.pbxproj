@@ -23,6 +23,8 @@
 		ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683161D2B04F500496E47 /* AlziegitTests.swift */; };
 		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
 		ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */; };
+		ADBA2F011D341E4C00D5B2DE /* FichaPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA2F001D341E4C00D5B2DE /* FichaPaciente.swift */; };
+		ADBA2F031D341FD300D5B2DE /* FichaPacienteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBA2F021D341FD300D5B2DE /* FichaPacienteDAO.swift */; };
 		ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3481D2D7AF000FECC5A /* Camera.swift */; };
 		ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */ = {isa = PBXBuildFile; fileRef = ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */; };
 		ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */; };
@@ -86,6 +88,8 @@
 		ADA683211D2B04F500496E47 /* AlziegitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitUITests.swift; sourceTree = "<group>"; };
 		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerFotosAlbumControllerView.swift; sourceTree = "<group>"; };
+		ADBA2F001D341E4C00D5B2DE /* FichaPaciente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaPaciente.swift; sourceTree = "<group>"; };
+		ADBA2F021D341FD300D5B2DE /* FichaPacienteDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaPacienteDAO.swift; sourceTree = "<group>"; };
 		ADC2C3481D2D7AF000FECC5A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trechos_codigos_anotacoes; sourceTree = "<group>"; };
 		ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		AD75A8ED1D2B098A005DECCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADBA2F001D341E4C00D5B2DE /* FichaPaciente.swift */,
 				AD75A8EF1D2B0B17005DECCD /* Albuns.swift */,
 				AD75A8F51D2B1013005DECCD /* FotosAlbum.swift */,
 				AD75A8EE1D2B09B8005DECCD /* DAO */,
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AD75A8F31D2B0EDE005DECCD /* albumDAO.swift */,
+				ADBA2F021D341FD300D5B2DE /* FichaPacienteDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -435,8 +441,10 @@
 				ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */,
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADC2C3531D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift in Sources */,
+				ADBA2F011D341E4C00D5B2DE /* FichaPaciente.swift in Sources */,
 				AD9AC0BB1D2E65B200CD805A /* AdicionarPessoasViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
+				ADBA2F031D341FD300D5B2DE /* FichaPacienteDAO.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
 				ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */,
 				ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */,

@@ -11,6 +11,7 @@ import RealmSwift
 
 class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    @IBOutlet weak var collectionTela: UICollectionView!
     var collectionView: UICollectionView?
     var screenSize: CGRect!
     var screenWidth: CGFloat!
@@ -24,6 +25,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //Serve para armazenar a quantidade de albums já criados
     var items: Int = Int()
+    var indiceClicado: Int = 0
     
     //Serve para pegar uma lista de dados do album
     
@@ -62,7 +64,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         
                         print("\(self.items)")
             print("Vetor com objetos: \(self.listaBanco.count)")
-            
+        
             self.collectionView?.collectionViewLayout.invalidateLayout()
             self.collectionView?.collectionViewLayout.prepareLayout()
 
@@ -145,20 +147,38 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //implemente para quando uma celula for clicada
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.item)!")
-        print("Carregando fotos do album")
-        self.albumClicado = listaBanco[indexPath.row]
         
-        print("Qt. lista de fotos do album clicado nesta celula: \(listaBanco[indexPath.row].listaFotosDoAlbum.count)")
+      
+            
+            
+            self.indiceClicado = indexPath.item
+            print("You selected cell #\(indexPath.item)!")
+            print("Carregando fotos do album")
+            self.albumClicado = self.listaBanco[indexPath.item]
+            print("Qt. lista de fotos do album clicado nesta celula: \(self.listaBanco[indexPath.row].listaFotosDoAlbum.count)")
+            
+            print("Nome do ente clicado: \(self.albumClicado.NomeEnteLegenda)")
+     
         
-        print("Nome do ente clicado: \(self.albumClicado.NomeEnteLegenda)")
+        
     }
     
     
+    
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Dentro de prepareForSegue. IndiceClicado: \(self.indiceClicado)")
         if segue.identifier == "verFotosDoAlbum"{
             var svc = segue.destinationViewController as? VerFotosAlbumControllerView
-            svc?.albumDoEnte = self.albumClicado
+            
+            let indePath = self.collectionTela.indexPathsForSelectedItems() as [NSIndexPath]!
+            let index = indePath[0]
+            
+            
+            let e = listaBanco[index.row]
+            
+            svc?.albumDoEnte = e
         }
     }
     

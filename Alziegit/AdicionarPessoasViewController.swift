@@ -57,6 +57,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
     var fotoParaAlbumConvertidaNSDATA: NSData?
     
+    
+    var legendaInserida: String = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +78,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AdicionarPessoasViewController.keyboardDidHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,7 +111,6 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     ///salva os dados do album e tambem da pessoa a quem o album referencia
     @IBAction func salvarAlbumNavBTN(sender: AnyObject) {
         
-    
         //caso o usuario nao coloque o nome do ente
         if(self.addPessoasContainer?.nomePessoaAdicionarTextEdit == nil || (self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text?.isEmpty)!){
             print("Nome da pessoa que sera salva no album vazio... ")
@@ -146,11 +148,21 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }else{
             self.album.NomeEnteLegenda = self.addPessoasContainer?.nomePessoaAdicionarTextEdit.text
             self.album.grauParentescoLegenda = self.addPessoasContainer?.grauParetescoPessoaTextEdit.text
-            print("Dados salvos!")
+            
+            
+            self.fotosDoAlbum.legendaDaFoto = "Testando..."
+            self.fotosDoAlbum.foto = converterImagemParaNSDATA(self.fotoAvatarPadrao)
+            
+            self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+            print("Teste: \(self.album.listaFotosDoAlbum[0].legendaDaFoto)")
+            
+            
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
             //agora salvando diretamente no banco
             DAO.salvarAlbum(self.album)
+            print("Dados salvos!")
+            
         }
         
         
@@ -256,28 +268,32 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //funcao para permitir colocar uma legenda na foto assim que ela for registrada
     func colocarLegendaNaFoto(){
         print("Tentando inserir legenda...")
-        var legendaInserida: String = ""
+        
         let alertaLegenda: UIAlertController = UIAlertController(title: "Adicionar Legenda a foto", message: "Você pode adicionar uma legenda a sua foto caso queira.", preferredStyle: .Alert)
         
         //adicionado o text field e o button neste alerta
         alertaLegenda.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.placeholder = "Insira uma legenda, caso queira"
-            legendaInserida = textField.text!
+            self.legendaInserida = textField.text!
         })
         
         
         //adicionando os botoes
         let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
-            print("Salvando legenda...")
-            self.fotosDoAlbum.legendaDaFoto = legendaInserida
+            print("Salvando legenda... Conteudo: \(self.legendaInserida)")
+            self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
+           
+            
         }
         
         let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("Descartando legenda...")
-            legendaInserida = ""
-            self.fotosDoAlbum.legendaDaFoto = legendaInserida
+            self.legendaInserida = ""
+            self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
+
+            
         }
         
         
@@ -287,6 +303,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         //mostrando na tela o alerta
         self.presentViewController(alertaLegenda, animated: true, completion: nil)
+        
+        
         
     }
     

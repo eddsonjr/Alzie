@@ -25,11 +25,7 @@ class AlbumEntes: Object {
     dynamic var notasPessoa: String?
     
     
-    //variaveis de teste
-    var fotosNesteAlbum = [NSData]()
-    var legendasParaFoto = [String]()
-    
     //lista de fotos
-    var listaFotosDoAlbum =  List<FotosDoAlbum>()
+    let listaFotosDoAlbum =  List<FotosDoAlbum>()
         
 }

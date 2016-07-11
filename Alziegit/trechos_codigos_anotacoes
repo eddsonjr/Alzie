@@ -352,3 +352,50 @@ class addFotoCVCell: UICollectionViewCell{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//adicionando os botoes
+let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
+UIAlertAction in
+print("Salvando legenda... Conteudo: \(self.legendaInserida)")
+self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
+
+
+}
+
+let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
+UIAlertAction in
+print("Descartando legenda...")
+self.legendaInserida = ""
+self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
+
+
+}
+
+
+alertaLegenda.addAction(salvarLegendaButton)
+alertaLegenda.addAction(descartarLegenda)
+
+
+
+
+
+

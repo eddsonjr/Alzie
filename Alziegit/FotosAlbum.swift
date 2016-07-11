@@ -17,7 +17,7 @@ class FotosDoAlbum:Object {
     
     
     // associando o album a quem a foto pertence
-    dynamic var Album: AlbumEntes?
+   // dynamic var Album: AlbumEntes?
 
     
     

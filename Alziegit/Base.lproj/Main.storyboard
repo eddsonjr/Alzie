@@ -170,11 +170,18 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vs-oJ-toh">
                                                     <rect key="frame" x="29" y="13" width="171" height="128"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfE-zx-Du1">
+                                                    <rect key="frame" x="93" y="162" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99921875000000004" green="0.99921875000000004" blue="0.99921875000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
                                             <outlet property="celulaImg" destination="0Vs-oJ-toh" id="iAX-SU-vg1"/>
+                                            <outlet property="idFoto" destination="HfE-zx-Du1" id="l2A-wd-eIS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

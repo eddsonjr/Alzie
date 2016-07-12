@@ -96,7 +96,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         
         
             cell.celulaImg.image = UIImage(data: self.albumDoEnte.listaFotosDoAlbum[indexPath.row].foto!)
-        
+                    
         
         cell.frame.size.width = screenWidth / 4.3
         cell.frame.size.height = screenWidth / 4.3
@@ -137,6 +137,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
 
 class cel: UICollectionViewCell{
     
+    @IBOutlet weak var idFoto: UILabel!
     @IBOutlet weak var celulaImg: UIImageView!
     
 }

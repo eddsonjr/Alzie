@@ -16,6 +16,7 @@
 
 import Foundation
 import RealmSwift
+import Realm
 
 class AlbumEntes: Object {
     

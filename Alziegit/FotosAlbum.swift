@@ -16,6 +16,7 @@ class FotosDoAlbum:Object {
     dynamic var legendaDaFoto: String?
     
     
+    
     // associando o album a quem a foto pertence
    // dynamic var Album: AlbumEntes?
 

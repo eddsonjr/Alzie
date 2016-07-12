@@ -43,6 +43,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var album: AlbumEntes = AlbumEntes()
     var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
     var DAO: AlbumDAO = AlbumDAO()
+    //var fotosDoAlbumLista: [FotosDoAlbum] = []
     
     //variavel para alertas
     var alerta: UIAlertView?
@@ -160,7 +161,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             
             //self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
             //testPopularAlbum()
-            
+           
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
             //agora salvando diretamente no banco
@@ -246,13 +247,15 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.fotoTirada = image
         self.listaImagensCelula.append(image)
+        self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.listaImagensCelula.last!)
+        self.atualizarListaFotos()
         self.dismissViewControllerAnimated(true, completion:{
             self.colocarLegendaNaFoto()
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
             self.atualizarCollectionView("add")
             //self.listaDeImagensParaSalvar.append(self.converterImagemParaNSDATA(image)) //TESTES
-            //self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
-            //self.atualizarListaFotos()
+            
+           
           
         });
        
@@ -345,8 +348,10 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! celula
         cell.celulaImageView.image = self.listaImagensCelula[indexPath.row]
-        self.fotosDoAlbum.foto = converterImagemParaNSDATA(cell.celulaImageView.image!)
-        self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+        
+        
+    
+       
         return cell
     }
     
@@ -395,6 +400,14 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
 //            self.album.listaFotosDoAlbum[s].foto = self.listaDeImagensParaSalvar[s]
 //        }
 //    }
+    
+    
+//    func TestPopularAlbum(){
+//        for l in fotosDoAlbumLista{
+//            album.listaFotosDoAlbum.append(l)
+//        }
+//    }
+    
 }
 
 

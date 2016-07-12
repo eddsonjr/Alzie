@@ -284,40 +284,37 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //funcao para permitir colocar uma legenda na foto assim que ela for registrada
     func colocarLegendaNaFoto() -> String{
         print("Inserindo legenda...")
-        var legendaInserida: String?
+        var legendaInserida: String = String()
         
         let alertaLegenda: UIAlertController = UIAlertController(title: "Adicionar Legenda a foto", message: "Você pode adicionar uma legenda a sua foto caso queira.", preferredStyle: .Alert)
         
-        //adicionado o text field e o button neste alerta
-        alertaLegenda.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-            textField.placeholder = "Insira uma legenda, caso queira"
-            legendaInserida = textField.text!
+        var textField: UITextField = UITextField()
+        //let textField = alertaLegenda.textFields?.first
+       
+        let salvarLegenda = UIAlertAction(title: "Armazenar Legenda", style: .Default, handler: {(action:UIAlertAction) -> Void in
+            textField = (alertaLegenda.textFields?.first)!
+            legendaInserida = (textField.text)!
+            print("Legenda: \(legendaInserida)")
+        })
+        
+        let cancelarLegenda = UIAlertAction(title: "Não salvar legenda", style: .Default, handler: {
+            (action: UIAlertAction) -> Void in
+            legendaInserida = ""
         })
         
         
-        //adicionando os botoes
-        let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
-            print("Salvando legenda... Conteudo: \(legendaInserida)")
-            
-            
-        }
-        
-        let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
-            print("Descartando legenda...")
-            legendaInserida = ""
+        alertaLegenda.addTextFieldWithConfigurationHandler{
+            (textField: UITextField) -> Void in
         }
         
         
-        alertaLegenda.addAction(salvarLegendaButton)
-        alertaLegenda.addAction(descartarLegenda)
         
+        alertaLegenda.addAction(salvarLegenda)
+        alertaLegenda.addAction(cancelarLegenda)
         
-        //mostrando na tela o alerta
         self.presentViewController(alertaLegenda, animated: true, completion: nil)
         
-        return legendaInserida!
+        return legendaInserida
         
     }
     

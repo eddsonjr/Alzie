@@ -40,6 +40,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
+        print("Testes")
         
         
         self.imagemConvertida = UIImage(data: self.albumDoEnte.fotoAvatar!)

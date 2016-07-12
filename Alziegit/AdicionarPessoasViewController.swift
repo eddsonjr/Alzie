@@ -41,9 +41,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     //variaveis do tipo Album, FotosAlbum e DAO
     var album: AlbumEntes = AlbumEntes()
-    var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
+    //var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
     var DAO: AlbumDAO = AlbumDAO()
-    //var fotosDoAlbumLista: [FotosDoAlbum] = []
+    var fotosDoAlbumLista: [FotosDoAlbum] = []
     
     //variavel para alertas
     var alerta: UIAlertView?
@@ -62,7 +62,6 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var fotoParaAlbumConvertidaNSDATA: NSData?
     
     
-    var legendaInserida: String = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,7 +160,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             
             //self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
             //testPopularAlbum()
-           
+            
+            
+            //salvarListaDeFotosNoAlbum()
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
             //agora salvando diretamente no banco
@@ -247,11 +248,15 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.fotoTirada = image
         self.listaImagensCelula.append(image)
-        self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.listaImagensCelula.last!)
-        self.atualizarListaFotos()
-        self.dismissViewControllerAnimated(true, completion:{
-            self.colocarLegendaNaFoto()
+        //self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.listaImagensCelula.last!)
+        //self.atualizarListaFotos()
+            self.dismissViewControllerAnimated(true, completion:{
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
+            var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
+            fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
+            fotosDoAlbum.legendaDaFoto =  self.colocarLegendaNaFoto()
+            self.album.listaFotosDoAlbum.append(fotosDoAlbum)
+            //self.fotosDoAlbumLista.append(fotosDoAlbum)
             self.atualizarCollectionView("add")
             //self.listaDeImagensParaSalvar.append(self.converterImagemParaNSDATA(image)) //TESTES
             
@@ -277,34 +282,31 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     
     //funcao para permitir colocar uma legenda na foto assim que ela for registrada
-    func colocarLegendaNaFoto(){
-        print("Tentando inserir legenda...")
+    func colocarLegendaNaFoto() -> String{
+        print("Inserindo legenda...")
+        var legendaInserida: String?
         
         let alertaLegenda: UIAlertController = UIAlertController(title: "Adicionar Legenda a foto", message: "Você pode adicionar uma legenda a sua foto caso queira.", preferredStyle: .Alert)
         
         //adicionado o text field e o button neste alerta
         alertaLegenda.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.placeholder = "Insira uma legenda, caso queira"
-            self.legendaInserida = textField.text!
+            legendaInserida = textField.text!
         })
         
         
         //adicionando os botoes
         let salvarLegendaButton = UIAlertAction(title: "Colocar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
-            print("Salvando legenda... Conteudo: \(self.legendaInserida)")
-            self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
-           
+            print("Salvando legenda... Conteudo: \(legendaInserida)")
+            
             
         }
         
         let descartarLegenda = UIAlertAction(title: "Não salvar Legenda", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("Descartando legenda...")
-            self.legendaInserida = ""
-            self.fotosDoAlbum.legendaDaFoto = self.legendaInserida
-
-            
+            legendaInserida = ""
         }
         
         
@@ -315,25 +317,25 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         //mostrando na tela o alerta
         self.presentViewController(alertaLegenda, animated: true, completion: nil)
         
-        
+        return legendaInserida!
         
     }
     
     
     //atualiza a lista de fotos a ser salva no banco
-    func atualizarListaFotos(){
-        print("atualizando lista de fotos para o banco...")
-        if  qtCells >= 0 {
-            self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
-        }
-    }
+//    func atualizarListaFotos(){
+//        print("atualizando lista de fotos para o banco...")
+//        if  qtCells >= 0 {
+//            //self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+//        }
+//    }
     
-    func removerDaListaDeFotos(index: Int){
-        print("Removendo lista de fotos para o banco...")
-        if qtCells >= 0 {
-            self.album.listaFotosDoAlbum.removeAtIndex(index)
-        }
-    }
+//    func removerDaListaDeFotos(index: Int){
+//        print("Removendo lista de fotos para o banco...")
+//        if qtCells >= 0 {
+//            //self.album.listaFotosDoAlbum.removeAtIndex(index)
+//        }
+//    }
     
     
     
@@ -349,8 +351,6 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! celula
         cell.celulaImageView.image = self.listaImagensCelula[indexPath.row]
         
-        
-    
        
         return cell
     }
@@ -359,14 +359,13 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Celula clicada: \(indexPath.row)")
         self.listaImagensCelula.removeAtIndex(indexPath.row)
-        removerDaListaDeFotos(indexPath.row)
+        //removerDaListaDeFotos(indexPath.row)
         atualizarCollectionView("delete")
     }
 
     
     //este metodo serve para atualizar os dados dentro da collectionView
     func atualizarCollectionView(operacao: String){
-        
         switch operacao {
         case "add":
             self.collectionView.performBatchUpdates({
@@ -380,9 +379,6 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
                 self.qtCells--
                 self.collectionView.reloadData()
                 }, completion: nil)
-            
-            
-            
         default: break
             print("Selecione uma das seguintes opcoes: delete ou add")
         }
@@ -407,6 +403,15 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
 //            album.listaFotosDoAlbum.append(l)
 //        }
 //    }
+    
+    
+    func salvarListaDeFotosNoAlbum(){
+        var s = 0
+        while s <= fotosDoAlbumLista.count{
+            self.album.listaFotosDoAlbum[s] = self.fotosDoAlbumLista[s]
+        }
+    }
+
     
 }
 

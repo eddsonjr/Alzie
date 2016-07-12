@@ -71,6 +71,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         var imagemConvertida: UIImage?
         
         while (self.qtF < self.albumDoEnte.listaFotosDoAlbum.count) {
+            
             imagemConvertida = UIImage(data: self.albumDoEnte.listaFotosDoAlbum[qtF].foto!)
             self.listaDeFotosNesteAlbum.append(imagemConvertida!)
             self.qtF++
@@ -94,7 +95,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
          let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! cel
         
         
-            cell.celulaImg.image = listaDeFotosNesteAlbum[indexPath.item]
+            cell.celulaImg.image = UIImage(data: self.albumDoEnte.listaFotosDoAlbum[indexPath.row].foto!)
         
         
         cell.frame.size.width = screenWidth / 4.3

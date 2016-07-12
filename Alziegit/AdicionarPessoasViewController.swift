@@ -30,6 +30,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var qtCells = 0 //quantidade de celulas na collectionview
     var listaImagensCelula : [UIImage] = [] //ira armazenar as fotos tiradas ou pegas da galeria que irao para a collectionview
     
+    //var listaDeImagensParaSalvar: [NSData] = []  //TESTE
+    
 
     //variaveis de deimensoes - servem para manipular o tamanho das celulas
     var screenSize: CGRect!
@@ -157,6 +159,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             
             
             //self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
+            //testPopularAlbum()
             
             self.alerta = UIAlertView(title: "Dados Salvos", message: "Album Salvo com sucesso", delegate: self, cancelButtonTitle: "Ok")
             self.alerta?.show()
@@ -247,8 +250,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             self.colocarLegendaNaFoto()
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
             self.atualizarCollectionView("add")
-            self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
-            self.atualizarListaFotos()
+            //self.listaDeImagensParaSalvar.append(self.converterImagemParaNSDATA(image)) //TESTES
+            //self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
+            //self.atualizarListaFotos()
           
         });
        
@@ -341,6 +345,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! celula
         cell.celulaImageView.image = self.listaImagensCelula[indexPath.row]
+        self.fotosDoAlbum.foto = converterImagemParaNSDATA(cell.celulaImageView.image!)
+        self.album.listaFotosDoAlbum.append(self.fotosDoAlbum)
         return cell
     }
     
@@ -377,6 +383,18 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         }
         
     }
+    
+    
+    
+    
+    
+    //FUNCAO DE TESTES PARA TENTAR SALVAR OS DADOS DENTRO DO ALBUM
+//    func testPopularAlbum(){
+//        let s = 0
+//        while  s < self.listaDeImagensParaSalvar.count {
+//            self.album.listaFotosDoAlbum[s].foto = self.listaDeImagensParaSalvar[s]
+//        }
+//    }
 }
 
 

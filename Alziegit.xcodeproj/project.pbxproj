@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87AFC10D1D32F3C800BB3C5B /* PessoasInfoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFC10C1D32F3C800BB3C5B /* PessoasInfoContainer.swift */; };
+		87AFC10F1D32F3DE00BB3C5B /* InfoPessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFC10E1D32F3DE00BB3C5B /* InfoPessoasViewController.swift */; };
+		87AFC1111D35401200BB3C5B /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AFC1101D35401200BB3C5B /* Tabbar.swift */; };
 		AD75A8E61D2B07A7005DECCD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; };
 		AD75A8E71D2B07A8005DECCD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD75A8E81D2B07A8005DECCD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; };
@@ -22,8 +25,6 @@
 		ADA6830C1D2B04F400496E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA6830A1D2B04F400496E47 /* LaunchScreen.storyboard */; };
 		ADA683171D2B04F500496E47 /* AlziegitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683161D2B04F500496E47 /* AlziegitTests.swift */; };
 		ADA683221D2B04F500496E47 /* AlziegitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA683211D2B04F500496E47 /* AlziegitUITests.swift */; };
-		ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */; };
-		ADAE3BFA1D2F55DA00A1B1EF /* AddFotosAlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3BF91D2F55DA00A1B1EF /* AddFotosAlbumCollectionViewController.swift */; };
 		ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3481D2D7AF000FECC5A /* Camera.swift */; };
 		ADC2C34B1D2D848400FECC5A /* trechos_codigos_anotacoes in Resources */ = {isa = PBXBuildFile; fileRef = ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */; };
 		ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */; };
@@ -67,6 +68,9 @@
 /* Begin PBXFileReference section */
 		4AF1532D13BF5DCEC5E92EBD /* Pods-Alziegit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.debug.xcconfig"; sourceTree = "<group>"; };
 		523263B38CFF0BE7CE8C18ED /* Pods-Alziegit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.release.xcconfig"; sourceTree = "<group>"; };
+		87AFC10C1D32F3C800BB3C5B /* PessoasInfoContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoasInfoContainer.swift; sourceTree = "<group>"; };
+		87AFC10E1D32F3DE00BB3C5B /* InfoPessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPessoasViewController.swift; sourceTree = "<group>"; };
+		87AFC1101D35401200BB3C5B /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		AD75A8E41D2B07A7005DECCD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		AD75A8EF1D2B0B17005DECCD /* Albuns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Albuns.swift; sourceTree = "<group>"; };
@@ -86,8 +90,6 @@
 		ADA6831D1D2B04F500496E47 /* AlziegitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlziegitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA683211D2B04F500496E47 /* AlziegitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlziegitUITests.swift; sourceTree = "<group>"; };
 		ADA683231D2B04F500496E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerFotosAlbumControllerView.swift; sourceTree = "<group>"; };
-		ADAE3BF91D2F55DA00A1B1EF /* AddFotosAlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFotosAlbumCollectionViewController.swift; sourceTree = "<group>"; };
 		ADC2C3481D2D7AF000FECC5A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		ADC2C34A1D2D848400FECC5A /* trechos_codigos_anotacoes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trechos_codigos_anotacoes; sourceTree = "<group>"; };
 		ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +143,9 @@
 				ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */,
 				ADC2C3521D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift */,
 				AD9AC0BA1D2E65B200CD805A /* AdicionarPessoasViewController.swift */,
-				ADAE3BEF1D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift */,
-				ADAE3BF91D2F55DA00A1B1EF /* AddFotosAlbumCollectionViewController.swift */,
+				87AFC10C1D32F3C800BB3C5B /* PessoasInfoContainer.swift */,
+				87AFC10E1D32F3DE00BB3C5B /* InfoPessoasViewController.swift */,
+				87AFC1101D35401200BB3C5B /* Tabbar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -319,7 +322,7 @@
 				TargetAttributes = {
 					ADA682FD1D2B04F400496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7WV8M257CC;
+						DevelopmentTeam = W3HBC24LTT;
 					};
 					ADA683111D2B04F500496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -435,15 +438,16 @@
 				ADC2C3551D2DB1A800FECC5A /* NamedViewController.swift in Sources */,
 				AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */,
 				AD75A8F01D2B0B17005DECCD /* Albuns.swift in Sources */,
+				87AFC10F1D32F3DE00BB3C5B /* InfoPessoasViewController.swift in Sources */,
+				87AFC1111D35401200BB3C5B /* Tabbar.swift in Sources */,
+				87AFC10D1D32F3C800BB3C5B /* PessoasInfoContainer.swift in Sources */,
 				ADC2C3491D2D7AF000FECC5A /* Camera.swift in Sources */,
 				ADA683041D2B04F400496E47 /* ViewController.swift in Sources */,
 				ADC2C3531D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift in Sources */,
-				ADAE3BFA1D2F55DA00A1B1EF /* AddFotosAlbumCollectionViewController.swift in Sources */,
 				AD9AC0BB1D2E65B200CD805A /* AdicionarPessoasViewController.swift in Sources */,
 				ADA683021D2B04F400496E47 /* AppDelegate.swift in Sources */,
 				AD75A8F61D2B1013005DECCD /* FotosAlbum.swift in Sources */,
 				ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */,
-				ADAE3BF01D2F3ACA00A1B1EF /* VerFotosAlbumControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

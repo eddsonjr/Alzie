@@ -16,20 +16,31 @@
 
 import UIKit
 
-class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    //variavel da celula da collectionView
+    let reuserIdentifier  = "addFotoColecoVCell"
+    
+    
+    //variavel do tipo imagem que representa a imagem da celula
+    var fotoParaCell: UIImage?
+    
+    //variaveis de deimensoes
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+    
+
+    
+    
+    
+    
     
     //variavies de views
     //esta variavel define o container de adicionar pessoas
     var addPessoasContainer: AdicionarPessoaContainerControllerViewController? = nil
     
     
-    
-    //Esta variavel serve para manipular a collectionView
-    @IBOutlet weak var addFotosCollectionView: UICollectionView!
-    
-    
-    //variavel que reperesnta a controladora da collectionView
-    var CV: AddFotosAlbumCollectionViewController = AddFotosAlbumCollectionViewController()
     
     //variaveis do tipo Album, FotosAlbum e DAO
     var album: AlbumEntes = AlbumEntes()
@@ -47,6 +58,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     //variavel para trabalhar caso nao haja foto de perfil
     let fotoAvatarPadrao : UIImage = UIImage(named: "personNoImage2")!
+    var primeiraFotoAlbum: UIImage?
     var fotoAvatarPadraoConvetidaNSDATA : NSData?
     var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
 
@@ -54,6 +66,12 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenSize = UIScreen.mainScreen().bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+
+        
         
         self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
         self.alerta!.show()
@@ -87,7 +105,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     //Adicionando a segue abaixo
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "addPessoaSegueToContainer"{
-            print("Segue para o container Adicionar Pessoas criada!")
+            print("Segue para ox container Adicionar Pessoas criada!")
             self.addPessoasContainer = segue.destinationViewController as? AdicionarPessoaContainerControllerViewController
         }
     }
@@ -162,12 +180,14 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
             
         }
+        
+        
         let galeriaAlertaAddButton = UIAlertAction(title: "Galeria", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             print("galeria escolhida")
             self.pegarFotoGaleria()
-            self.CV.fotoParaCell = self.fotoTirada
-            self.addFotosCollectionView.reloadData()
+//            self.CV.fotoParaCell = self.fotoTirada
+//            self.addFotosCollectionView.reloadData()
         }
         
         //adicionando os botoes ao controlador
@@ -215,6 +235,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.fotoTirada = image
+        self.primeiraFotoAlbum = image
         self.dismissViewControllerAnimated(true, completion: nil);
         converterImagemParaNSDATA()
     }
@@ -232,6 +253,43 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     
     }
     
+    // TO DO: Implementar um metodo que adiciona as fotos, e etc direto no banco
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! addFotoCVCell
+        
+        //configurando as dimensoes da celula
+        cell.layer.borderColor = UIColor.redColor().CGColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 10
+        
+        //configurando os elementos que irao aparecer na celula
+        cell.fotoAddCell.image = self.primeiraFotoAlbum
+        //cell.labelFotoAddCell.text = "Teste"   ------> Isso aqui ta dando erro, Nao sei porque. <-------- //
+        
+        
+        
+        
+        
+        return cell
+    }
+    
+    
+    
+}
+
+
+
+
+class addFotoCVCell: UICollectionViewCell{
+    
+    @IBOutlet weak var fotoAddCell: UIImageView!
+    @IBOutlet weak var labelFotoAddCell: UILabel!
     
 }

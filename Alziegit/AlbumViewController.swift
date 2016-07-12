@@ -83,13 +83,17 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
     
     let reuserIdentifier  = "cell"
-//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        return 1
+    
+    var iitems = ["1", "2", "3", "4", "5", "6"]
+//   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        return self.iitems.count
 //    }
 
     //configura a quantiade de items salvos na base
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items
+        //return self.items
+        
+        return self.iitems.count // APAGAR ISTO
     }
     
     
@@ -107,17 +111,19 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
          let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuserIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
         
         
-        cell.NomeLabel.text = listaBanco[indexPath.item].NomeEnteLegenda
-        cell.backgroundColor = UIColor.whiteColor()
-        let fotoAvatar: UIImage = UIImage(data:  listaBanco[indexPath.item].fotoAvatar!)!
-        cell.imagePessoa.image = fotoAvatar
+        //cell.NomeLabel.text = listaBanco[indexPath.item].NomeEnteLegenda
+        cell.NomeLabel.text = self.iitems[indexPath.item]
+        
+        //cell.backgroundColor = UIColor.whiteColor()
+//        let fotoAvatar: UIImage = UIImage(data:  listaBanco[indexPath.item].fotoAvatar!)!
+//        cell.imagePessoa.image = fotoAvatar
         
         //improving the cell
-        cell.layer.borderColor = UIColor.blackColor().CGColor
-        cell.layer.borderWidth = 2
+        //cell.layer.borderColor = UIColor.redColor().CGColor
+        //cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 10
-        cell.frame.size.width = screenWidth / 4.3
-        cell.frame.size.height = screenWidth / 4.3
+//        cell.frame.size.width = screenWidth / 4.3
+//        cell.frame.size.height = screenWidth / 4.3
         return cell
         
     }

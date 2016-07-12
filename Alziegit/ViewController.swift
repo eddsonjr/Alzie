@@ -12,6 +12,9 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fundo")!)
+        
 
     }
 
@@ -20,6 +23,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         // Dispose of any resources that can be recreated.
     }
     
-    
+
 }
 

@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Fundo")!)
         
+        UITabBarItem.appearance().image = UIImage(named:"HomeAtivo" )
+        
 
     }
 
@@ -23,6 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         // Dispose of any resources that can be recreated.
     }
     
+   
 
 }
 

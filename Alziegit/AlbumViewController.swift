@@ -9,6 +9,9 @@
 import UIKit
 import RealmSwift
 
+
+
+
 class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
     var collectionView: UICollectionView?

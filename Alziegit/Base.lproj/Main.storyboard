@@ -14,27 +14,45 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fundo" translatesAutoresizingMaskIntoConstraints="NO" id="CR6-8k-YHc">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jogos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVa-Bj-bNy">
+                                <rect key="frame" x="469" y="130" width="87" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-eH-MFQ">
-                                <rect key="frame" x="724" y="184" width="280" height="400"/>
+                                <rect key="frame" x="703" y="184" width="301" height="400"/>
                                 <state key="normal" image="Anotaçoes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-6r-ZHM">
-                                <rect key="frame" x="20" y="184" width="280" height="400"/>
+                                <rect key="frame" x="20" y="184" width="301" height="462"/>
                                 <state key="normal" title="Button" image="Memorias"/>
                                 <connections>
                                     <segue destination="rkW-y5-SLg" kind="show" id="Q1A-iv-3Cg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-wK-FGm">
-                                <rect key="frame" x="372" y="184" width="280" height="400"/>
+                                <rect key="frame" x="362" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Jogos"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memórias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOF-JC-0KP">
+                                <rect key="frame" x="83" y="130" width="165" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anotações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT3-Bd-uuv">
+                                <rect key="frame" x="784" y="130" width="138" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -56,7 +74,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Zm5-PI-auu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yxy-1C-hAt">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-jD-V9a">
@@ -138,7 +156,7 @@
                         <viewControllerLayoutGuide type="bottom" id="18C-lU-33C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ibU-z8-FgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-tP-k2e">
@@ -167,7 +185,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1q-8L-XCS">
                                                     <rect key="frame" x="71" y="144" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-h3-H8s">
@@ -206,7 +224,7 @@
                         <viewControllerLayoutGuide type="bottom" id="coy-MY-BRz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vLM-x1-HOm">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qy-9f-lZq">
@@ -281,7 +299,9 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YMg-ja-NFw" customClass="MyTabbarController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="7zr-S2-v2o">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="7zr-S2-v2o">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -304,7 +324,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ETo-qU-n5O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vkn-ls-Pyx">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -320,7 +340,7 @@
         <scene sceneID="oYW-tZ-oyh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWR-q3-6oq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="HomeAtivo" id="ri1-WD-7cX"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeativada" selectedImage="home" id="ri1-WD-7cX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaJ-tu-JF9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -344,7 +364,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Tdo-bP-kze"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Amc-mQ-A4Q">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fundo" translatesAutoresizingMaskIntoConstraints="NO" id="cae-Ig-AcX">
@@ -471,25 +491,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parentesco:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F48-1y-bHN">
                                 <rect key="frame" x="20" y="293" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data aniversário:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6B-Nb-HmW">
                                 <rect key="frame" x="20" y="360" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCE-wV-05L">
                                 <rect key="frame" x="20" y="317" width="206" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rW-A5-Ugt">
                                 <rect key="frame" x="20" y="387" width="193" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -542,6 +562,10 @@
         <scene sceneID="8b9-2A-v4g">
             <objects>
                 <viewController id="O2u-eM-5bk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dqM-Lo-MzC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gie-ci-9wm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uNT-Qd-Jcv">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -556,6 +580,10 @@
         <scene sceneID="W3i-h5-Lor">
             <objects>
                 <viewController id="sQ8-m7-GWM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HvW-LO-Ph9"/>
+                        <viewControllerLayoutGuide type="bottom" id="T8x-ZY-uyu"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0vo-OB-ga6">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,6 +598,10 @@
         <scene sceneID="pBm-AS-Mau">
             <objects>
                 <viewController id="Bho-B6-bhA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4zn-v7-s2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="13o-7S-swh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fj6-3m-xDc">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,10 +616,11 @@
     <resources>
         <image name="Anotaçoes" width="563" height="725"/>
         <image name="Fundo" width="2052" height="1537"/>
-        <image name="HomeAtivo" width="410" height="346"/>
         <image name="Jogos" width="571" height="703"/>
         <image name="Livro_1" width="1877" height="2241"/>
         <image name="Memorias" width="593" height="802"/>
+        <image name="home" width="50" height="45"/>
+        <image name="homeativada" width="50" height="45"/>
         <image name="noImageIcon" width="418" height="455"/>
         <image name="personNoImage2" width="150" height="150"/>
     </resources>

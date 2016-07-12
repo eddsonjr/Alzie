@@ -31,40 +31,27 @@ extension UIColor{
 
 }
 
-
 class MyTabbarController: UITabBarController,UINavigationControllerDelegate{
     
     override func viewDidLoad() {
         
             // Sets the default color of the icon of the selected UITabBarItem and Title
         
-        var color = UIColor(red: 0x54, green: 0x34, blue: 0x86)
-        var color2 = UIColor(netHex:0x190E2D)
+        //let color = UIColor(red: 0x38, green: 0x25, blue: 0x63)
+        let color2 = UIColor(netHex:0x362256)
         
         // Sets the default color of the text
         UITabBar.appearance().tintColor = UIColor.blackColor()
         // Sets the default color of the background of the UITabBar
-        UITabBar.appearance().barTintColor = color
+        UITabBar.appearance().barTintColor = color2
         
-        
-        
-        
-        tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeAtivo"), selectedImage: UIImage(named: "HomeAtivo"))
+//        UITabBarItem.appearance().image = UIImage(named: "Home")
+//        
+//        tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "Home"), selectedImage: UIImage(named: "HomeAtivo"))
 
     
     }
-
+    
+    
+    
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

@@ -57,12 +57,16 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         self.items = DAO.retornarQuantidadeAlbunsNaBase() //retorna a quantidade de itens na base
         print("\(self.items)")
         print("Vetor com objetos: \(self.listaBanco.count)")
+        
+        //Tentando colocar um codigo para atualizar a lista de albuns carregados ja 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AlbumViewController.reloadCollectionView(_:)), name: "recarregarTelaDeAlbuns", object: nil)
+        
     }
     
     
     override func viewDidAppear(animated: Bool) {
         
-                        print("\(self.items)")
+            print("\(self.items)")
             print("Vetor com objetos: \(self.listaBanco.count)")
         
             self.collectionView?.collectionViewLayout.invalidateLayout()
@@ -74,6 +78,19 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
       
 
     }
+    
+    
+    //funcao para tentar atualizar a lista de albuns
+    func reloadCollectionView(notificacao: NSNotification){
+        self.collectionTela.performBatchUpdates({
+            self.collectionTela.insertItemsAtIndexPaths([NSIndexPath(forItem: self.collectionTela.visibleCells().count, inSection: 0)])
+            
+            self.collectionTela.reloadData()
+            }, completion: nil)
+        
+        print("Collection da tela de ")
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -109,7 +126,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     //configura a quantiade de items salvos na base
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.listaBanco .count
+        return self.listaBanco.count
     }
     
     

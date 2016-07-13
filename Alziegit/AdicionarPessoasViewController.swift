@@ -60,6 +60,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     var fotoAvatarPadraoConvetidaNSDATA : NSData?
     var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
     var fotoParaAlbumConvertidaNSDATA: NSData?
+    var imagePicker = UIImagePickerController()
     
     
 
@@ -233,10 +234,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     func tirarFoto() {
          var hasCam: Bool = UIImagePickerController.isSourceTypeAvailable(.Camera)
         if hasCam {
-            var imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }else{
             let alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Seu dispositivo não tem suporte a câmera", delegate: self, cancelButtonTitle: "Ok")
@@ -245,35 +245,36 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
     }
     
     //controladora de imagens
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        self.fotoTirada = image
-        self.listaImagensCelula.append(image)
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if imagePicker.allowsEditing {
+            self.fotoTirada = info[UIImagePickerControllerEditedImage] as! UIImage
+        }else {
+            self.fotoTirada = info[UIImagePickerControllerOriginalImage] as! UIImage
+        }
+        self.listaImagensCelula.append(self.fotoTirada)
         //self.fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.listaImagensCelula.last!)
         //self.atualizarListaFotos()
-            self.dismissViewControllerAnimated(true, completion:{
-            self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(image)
+        self.dismissViewControllerAnimated(true, completion:{
+            self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(self.fotoTirada)
             var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
-            fotosDoAlbum.foto = self.converterImagemParaNSDATA(image)
+            fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.fotoTirada)
             fotosDoAlbum.legendaDaFoto =  self.colocarLegendaNaFoto()
             self.album.listaFotosDoAlbum.append(fotosDoAlbum)
             //self.fotosDoAlbumLista.append(fotosDoAlbum)
             self.atualizarCollectionView("add")
             //self.listaDeImagensParaSalvar.append(self.converterImagemParaNSDATA(image)) //TESTES
             
-           
-          
+            
+            
         });
-       
     }
-    
     
     //pegar uma foto da galeria
     func pegarFotoGaleria(){
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-            var imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
-            imagePicker.allowsEditing = true
+            imagePicker.allowsEditing = false
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     

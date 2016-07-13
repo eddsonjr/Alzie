@@ -21,12 +21,8 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     var hasCam: Bool = UIImagePickerController.isSourceTypeAvailable(.Camera) //verifica se suporte a camera pelo dispositivo
     var fotoTirada: UIImage = UIImage(named: "personNoImage2")!
     var fotoTiradaConvertidaNSDATA: NSData?
-    
+    var imagePicker = UIImagePickerController()
 
-    
-    //variaveis para manipular o teclado
-    
-    
     
     //esta variavel define o controlador da tela onde o container esta alocado
     var addPessoasViewController : AdicionarPessoasViewController? = nil
@@ -67,28 +63,30 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     
     @IBAction func adicionarFotoPerfilPessoaAlbumBTN(sender: AnyObject) {
         if hasCam {
-            var imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }else{
             let alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Seu dispositivo não tem suporte a câmera", delegate: self, cancelButtonTitle: "Ok")
             alerta.show()
             
             //SOMENTE PARA TESTES - VERIFICAR A RETIRADA DESTA LINHA APOS
-            self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
-            converterImagemParaNSDATA()
+            //self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
+            //converterImagemParaNSDATA()
             
         }
 
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        self.fotoTirada = image
-        self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
-        self.dismissViewControllerAnimated(true, completion: nil);
-        converterImagemParaNSDATA()
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        self.fotoTirada = (info[UIImagePickerControllerEditedImage] as! UIImage)
+        self.dismissViewControllerAnimated(true, completion:{
+            self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
+            self.converterImagemParaNSDATA()
+        })
+        
+        
     }
 
     

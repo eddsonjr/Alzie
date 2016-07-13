@@ -47,6 +47,11 @@ class MyTabbarController: UITabBarController,UINavigationControllerDelegate{
         // Sets the default color of the background of the UITabBar
         UITabBar.appearance().barTintColor = color2
         
+        
+        
+        
+        
+        
     }
     
 }

@@ -57,6 +57,19 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         self.items = DAO.retornarQuantidadeAlbunsNaBase() //retorna a quantidade de itens na base
         print("\(self.items)")
         print("Vetor com objetos: \(self.listaBanco.count)")
+        
+        
+        let color = UIColor(netHex:0x362256)
+        
+        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 30))
+        label.text = "Minhas Memórias"
+        label.font = UIFont.boldSystemFontOfSize(18)
+        label.textColor = color
+        label.textAlignment = NSTextAlignment.Center
+        self.navigationItem.titleView = label
+        
+        
+        
     }
     
     

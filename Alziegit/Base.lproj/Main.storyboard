@@ -99,15 +99,15 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZB-f9-aTn">
                                                     <rect key="frame" x="48" y="33" width="150" height="159"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Livro_1" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-du-DiK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="250"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="log-Ou-BqF">
                                                     <rect key="frame" x="31" y="186" width="171" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Livro_1" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-du-DiK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="250"/>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -194,10 +194,10 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-La-wbK">
                                 <rect key="frame" x="246" y="64" width="778" height="655"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="w22-PD-ivG">
-                                    <size key="itemSize" width="209" height="215"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w22-PD-ivG">
+                                    <size key="itemSize" width="209" height="220"/>
                                     <size key="headerReferenceSize" width="10" height="10"/>
-                                    <size key="footerReferenceSize" width="20" height="20"/>
+                                    <size key="footerReferenceSize" width="10" height="10"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fundo" id="LVe-kM-yY3">
@@ -206,20 +206,20 @@
                                 </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yFm-ea-Ee0" customClass="cel" customModule="Alziegit" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="209" height="215"/>
+                                        <rect key="frame" x="10" y="10" width="209" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="209" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="209" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vs-oJ-toh">
-                                                    <rect key="frame" x="12" y="8" width="187" height="180"/>
+                                                    <rect key="frame" x="8" y="22" width="190" height="160"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moldura 3" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-9a-iLj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="209"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moldura 4" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-9a-iLj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="228"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfE-zx-Du1">
-                                                    <rect key="frame" x="25" y="194" width="159" height="21"/>
+                                                    <rect key="frame" x="25" y="184" width="159" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -238,7 +238,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Y2-qf-CQ7">
-                                    <rect key="frame" x="0.0" y="225" width="778" height="20"/>
+                                    <rect key="frame" x="0.0" y="230" width="778" height="10"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -287,7 +287,7 @@
             </objects>
             <point key="canvasLocation" x="4399" y="1272"/>
         </scene>
-        <!--Adicionar Álbum-->
+        <!--Adicionar Pessoas View Controller-->
         <scene sceneID="zc4-On-lQm">
             <objects>
                 <viewController id="d05-qt-Ttv" customClass="AdicionarPessoasViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
@@ -305,21 +305,12 @@
                                     <segue destination="6h0-Mt-gtF" kind="embed" identifier="addPessoaSegueToContainer" id="02x-S1-nk5"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qy-9f-lZq">
-                                <rect key="frame" x="919" y="619" width="80" height="80"/>
-                                <state key="normal" image="Adicionar (fotos fica em baixo)">
-                                    <color key="titleColor" red="0.16862745098039217" green="0.070588235294117646" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addFotosNoAlbumBTN:" destination="d05-qt-Ttv" eventType="touchUpInside" id="Snt-Yh-azU"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-fr-Tc9">
                                 <rect key="frame" x="246" y="64" width="778" height="655"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="QaU-Sa-Lk1">
-                                    <size key="itemSize" width="209" height="215"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QaU-Sa-Lk1">
+                                    <size key="itemSize" width="209" height="220"/>
                                     <size key="headerReferenceSize" width="10" height="10"/>
-                                    <size key="footerReferenceSize" width="20" height="20"/>
+                                    <size key="footerReferenceSize" width="10" height="10"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fundo" id="Zuh-RP-fiC">
@@ -328,20 +319,20 @@
                                 </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Bya-iZ-YOE" customClass="celula" customModule="Alziegit" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="209" height="215"/>
+                                        <rect key="frame" x="10" y="10" width="209" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="209" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="209" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-aq-RIE">
-                                                    <rect key="frame" x="11" y="8" width="190" height="179"/>
+                                                    <rect key="frame" x="8" y="22" width="190" height="160"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moldura 3" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-xx-CgX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="209"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moldura 4" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-xx-CgX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="228"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-hL-pFu">
-                                                    <rect key="frame" x="25" y="194" width="159" height="21"/>
+                                                    <rect key="frame" x="25" y="184" width="159" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -360,7 +351,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CeA-9g-MqI">
-                                    <rect key="frame" x="0.0" y="225" width="778" height="20"/>
+                                    <rect key="frame" x="0.0" y="230" width="778" height="10"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -368,10 +359,19 @@
                                     <outlet property="delegate" destination="d05-qt-Ttv" id="WaM-UW-zTC"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qy-9f-lZq">
+                                <rect key="frame" x="919" y="619" width="80" height="80"/>
+                                <state key="normal" image="Adicionar (fotos fica em baixo)">
+                                    <color key="titleColor" red="0.16862745098039217" green="0.070588235294117646" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFotosNoAlbumBTN:" destination="d05-qt-Ttv" eventType="touchUpInside" id="Snt-Yh-azU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adicionar Álbum" id="kNL-H3-bcd">
+                    <navigationItem key="navigationItem" id="kNL-H3-bcd">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="0yc-pJ-Xvs"/>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="UjZ-eV-gHc">
                             <color key="tintColor" red="0.16862745100000001" green="0.070588235289999995" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -773,7 +773,7 @@
         <image name="Jogos" width="571" height="703"/>
         <image name="Livro_1" width="1877" height="2241"/>
         <image name="Memorias" width="593" height="802"/>
-        <image name="Moldura 3" width="1029" height="1100"/>
+        <image name="Moldura 4" width="1393" height="1502"/>
         <image name="Numero emergencia" width="52" height="52"/>
         <image name="noImageIcon" width="418" height="455"/>
     </resources>

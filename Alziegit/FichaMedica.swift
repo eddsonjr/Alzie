@@ -10,10 +10,11 @@ import UIKit
 
 class FichaMedica: UIViewController {
 
-    @IBOutlet var PacienteImage: UIImageView!
+//    @IBOutlet var PacienteImage: UIImageView!
     @IBOutlet var NomePaciente: UILabel!
     @IBOutlet var AniversarioPaciente: UILabel!
     
+    @IBOutlet var PacienteImagemBTN: UIButton!
     //LABELS DA FICHA MEDICA
     
     @IBOutlet var problemasSaude: UILabel!

@@ -128,16 +128,16 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         
         cell.NomeLabel.text = listaBanco[indexPath.item].NomeEnteLegenda
-        cell.backgroundColor = UIColor.whiteColor()
+        //cell.backgroundColor = UIColor.whiteColor()
         let fotoAvatar: UIImage = UIImage(data:  listaBanco[indexPath.item].fotoAvatar!)!
         cell.imagePessoa.image = fotoAvatar
         
         //improving the cell
-        cell.layer.borderColor = UIColor.blackColor().CGColor
-        cell.layer.borderWidth = 2
+        //cell.layer.borderColor = UIColor.grayColor().CGColor
+        //cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 10
-        cell.frame.size.width = screenWidth / 4.3
-        cell.frame.size.height = screenWidth / 4.3
+//        cell.frame.size.width = screenWidth / 4.3
+//        cell.frame.size.height = screenWidth / 4.3
         return cell
         
     }

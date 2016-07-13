@@ -96,6 +96,8 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         
         
             cell.celulaImg.image = UIImage(data: self.albumDoEnte.listaFotosDoAlbum[indexPath.row].foto!)
+            print("Legenda da foto: \(albumDoEnte.listaFotosDoAlbum[indexPath.row].legendaDaFoto)")
+            cell.idFoto.text = albumDoEnte.listaFotosDoAlbum[indexPath.row].legendaDaFoto
                     
         
         cell.frame.size.width = screenWidth / 4.3

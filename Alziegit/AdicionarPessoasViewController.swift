@@ -72,6 +72,9 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
+        
+        
+        
         self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
         self.alerta!.show()
         
@@ -80,6 +83,20 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AdicionarPessoasViewController.keyboardDidHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        
+        
+        
+        let color = UIColor(netHex:0x362256)
+        
+        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 30))
+        label.text = "Adicionar Álbum"
+        label.font = UIFont.boldSystemFontOfSize(18)
+        label.textColor = color
+        label.textAlignment = NSTextAlignment.Center
+        self.navigationItem.titleView = label
+
+        
         
     }
     

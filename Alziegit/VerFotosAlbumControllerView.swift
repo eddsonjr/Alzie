@@ -17,7 +17,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var fotoPerfil: UIImageView!
     //nome da segue para esta controladora: verFotosDoAlbum
     
-       @IBOutlet weak var qtFotosNoAlbumLabel: UILabel!
+       //@IBOutlet weak var qtFotosNoAlbumLabel: UILabel!
     @IBOutlet weak var collectionDasFotos: UICollectionView!
     let reuserIdentifier  = "cell"
     
@@ -45,7 +45,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         self.imagemConvertida = UIImage(data: self.albumDoEnte.fotoAvatar!)
         self.fotoPerfil.image = imagemConvertida
         print("Dentro de visualizar album. Nome do album carregado: \(self.albumDoEnte.NomeEnteLegenda)")
-        self.qtFotosNoAlbumLabel.text = String(albumDoEnte.listaFotosDoAlbum.count)
+        //self.qtFotosNoAlbumLabel.text = String(albumDoEnte.listaFotosDoAlbum.count)
         retornarListaDeFotosDesteAlbum()
         
 //        var swipeDireita = UISwipeGestureRecognizer(target: self, action: "responderAoSwipe:")
@@ -130,6 +130,23 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
 //        
 //        
 //    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ampliarFotoSegue"{
+            var svc2 = segue.destinationViewController as? AmpliarFotoViewController
+            
+            let indePath = self.collectionDasFotos.indexPathsForSelectedItems() as [NSIndexPath]!
+            let index = indePath[0]
+            
+            
+            let e = listaDeFotosNesteAlbum[index.row]
+            
+            svc2?.imgFoto = e
+
+        }
+        
+    }
     
     
     

@@ -168,6 +168,11 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             self.alerta?.show()
             //agora salvando diretamente no banco
             DAO.salvarAlbum(self.album)
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("recarregarTelaDeAlbuns", object: nil)
+            self.navigationController?.popViewControllerAnimated(true)
+            
+            
             print("Dados salvos!")
             
             

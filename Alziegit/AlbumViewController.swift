@@ -75,7 +75,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     override func viewDidAppear(animated: Bool) {
         
-                        print("\(self.items)")
+            print("\(self.items)")
             print("Vetor com objetos: \(self.listaBanco.count)")
         
             self.collectionView?.collectionViewLayout.invalidateLayout()
@@ -87,6 +87,19 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
       
 
     }
+    
+    
+    //funcao para tentar atualizar a lista de albuns
+    func reloadCollectionView(notificacao: NSNotification){
+        self.collectionTela.performBatchUpdates({
+            self.collectionTela.insertItemsAtIndexPaths([NSIndexPath(forItem: self.collectionTela.visibleCells().count, inSection: 0)])
+            
+            self.collectionTela.reloadData()
+            }, completion: nil)
+        
+        print("Collection da tela de ")
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -122,7 +135,7 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     //configura a quantiade de items salvos na base
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.listaBanco .count
+        return self.listaBanco.count
     }
     
     

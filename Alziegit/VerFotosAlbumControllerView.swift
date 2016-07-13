@@ -132,6 +132,23 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
 //    }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ampliarFotoSegue"{
+            var svc2 = segue.destinationViewController as? AmpliarFotoViewController
+            
+            let indePath = self.collectionDasFotos.indexPathsForSelectedItems() as [NSIndexPath]!
+            let index = indePath[0]
+            
+            
+            let e = listaDeFotosNesteAlbum[index.row]
+            
+            svc2?.imgFoto = e
+
+        }
+        
+    }
+    
+    
     
 
 }

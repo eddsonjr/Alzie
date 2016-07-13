@@ -205,7 +205,7 @@
                                         <connections>
                                             <outlet property="celulaImg" destination="0Vs-oJ-toh" id="iAX-SU-vg1"/>
                                             <outlet property="idFoto" destination="HfE-zx-Du1" id="l2A-wd-eIS"/>
-                                            <segue destination="VRr-bk-v2g" kind="show" id="u4O-1R-W1S"/>
+                                            <segue destination="VRr-bk-v2g" kind="show" identifier="ampliarFotoSegue" id="u4O-1R-W1S"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="3125" y="1272"/>
         </scene>
-        <!--Ver Foto View Controller-->
+        <!--Ampliar Foto View Controller-->
         <scene sceneID="gw7-Ef-VbY">
             <objects>
-                <viewController id="VRr-bk-v2g" customClass="VerFotoViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VRr-bk-v2g" customClass="AmpliarFotoViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kf6-om-y0P"/>
                         <viewControllerLayoutGuide type="bottom" id="GDS-nU-QXY"/>
@@ -278,6 +278,9 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="foto" destination="09O-Kf-JGO" id="6GL-Eq-BcX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htp-zN-KKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

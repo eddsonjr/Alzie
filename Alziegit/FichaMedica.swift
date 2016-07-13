@@ -29,7 +29,8 @@ class FichaMedica: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("asdasd")
         // Do any additional setup after loading the view.
     }
 

@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="3125" y="1272"/>
         </scene>
-        <!--View Controller-->
+        <!--Ver Foto View Controller-->
         <scene sceneID="gw7-Ef-VbY">
             <objects>
-                <viewController id="VRr-bk-v2g" sceneMemberID="viewController">
+                <viewController id="VRr-bk-v2g" customClass="VerFotoViewController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kf6-om-y0P"/>
                         <viewControllerLayoutGuide type="bottom" id="GDS-nU-QXY"/>

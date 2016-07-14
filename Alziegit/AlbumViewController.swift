@@ -45,6 +45,12 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         }
         
     }
+    
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+        
+    }
 
     
     

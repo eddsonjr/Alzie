@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fundo" translatesAutoresizingMaskIntoConstraints="NO" id="nno-D9-UFG">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-6r-ZHM">
                                 <rect key="frame" x="20" y="184" width="300" height="462"/>
@@ -56,36 +56,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UCX-9P-670"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gy7-gN-gSS"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="324"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="XgU-0L-EjX">
-            <objects>
-                <viewController id="MM3-2s-h2A" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uST-ug-taF"/>
-                        <viewControllerLayoutGuide type="bottom" id="6g7-Or-RYT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WG5-ed-S9x">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ativo 63" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-Ot-kvN">
-                                <rect key="frame" x="180" y="188" width="240" height="128"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="beX-NS-AJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1002" y="1128"/>
+            <point key="canvasLocation" x="654" y="272"/>
         </scene>
         <!--Album View Controller-->
         <scene sceneID="rly-gT-qNM">
@@ -96,11 +75,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zm5-PI-auu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yxy-1C-hAt">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-jD-V9a">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="655"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cmd-bP-d15">
                                     <size key="itemSize" width="233" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -108,7 +87,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fundo" id="dt2-tg-phf">
-                                    <rect key="frame" x="0.0" y="-64" width="1024" height="655"/>
+                                    <rect key="frame" x="0.0" y="-64" width="1024" height="660"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -167,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mm-cE-ciW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="324"/>
+            <point key="canvasLocation" x="1930" y="272"/>
         </scene>
         <!--Ver Fotos Album Controller View-->
         <scene sceneID="lvE-gT-CKh">
@@ -178,7 +157,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qVe-we-iOk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RDF-X0-Rtk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6b-MU-v1c">
@@ -215,7 +194,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-La-wbK">
-                                <rect key="frame" x="246" y="64" width="778" height="655"/>
+                                <rect key="frame" x="246" y="64" width="778" height="660"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w22-PD-ivG">
                                     <size key="itemSize" width="209" height="220"/>
@@ -224,7 +203,7 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fundo" id="LVe-kM-yY3">
-                                    <rect key="frame" x="0.0" y="0.0" width="778" height="655"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="778" height="660"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -280,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhK-gf-DsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="1272"/>
+            <point key="canvasLocation" x="3174" y="1195"/>
         </scene>
         <!--Ampliar Foto View Controller-->
         <scene sceneID="gw7-Ef-VbY">
@@ -291,7 +270,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GDS-nU-QXY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WMv-A7-dr1">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09O-Kf-JGO">
@@ -308,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htp-zN-KKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4399" y="1272"/>
+            <point key="canvasLocation" x="4401" y="1195"/>
         </scene>
         <!--Adicionar Pessoas View Controller-->
         <scene sceneID="zc4-On-lQm">
@@ -319,17 +298,17 @@
                         <viewControllerLayoutGuide type="bottom" id="coy-MY-BRz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vLM-x1-HOm">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eD5-2p-K9P">
-                                <rect key="frame" x="0.0" y="64" width="246" height="655"/>
+                                <rect key="frame" x="0.0" y="64" width="246" height="660"/>
                                 <connections>
                                     <segue destination="6h0-Mt-gtF" kind="embed" identifier="addPessoaSegueToContainer" id="02x-S1-nk5"/>
                                 </connections>
                             </containerView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-fr-Tc9">
-                                <rect key="frame" x="246" y="64" width="778" height="655"/>
+                                <rect key="frame" x="246" y="64" width="778" height="660"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QaU-Sa-Lk1">
                                     <size key="itemSize" width="209" height="220"/>
                                     <size key="headerReferenceSize" width="10" height="10"/>
@@ -337,7 +316,7 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fundo" id="Zuh-RP-fiC">
-                                    <rect key="frame" x="0.0" y="0.0" width="778" height="655"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="778" height="660"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -411,14 +390,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7L-9u-ikv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="324"/>
+            <point key="canvasLocation" x="3174" y="272"/>
         </scene>
         <!--My Tabbar Controller-->
         <scene sceneID="fQs-Lf-Eoe">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YMg-ja-NFw" customClass="MyTabbarController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="7zr-S2-v2o">
@@ -433,7 +411,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFM-PG-hwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1822" y="108"/>
+            <point key="canvasLocation" x="-1822" y="272"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zVz-VP-TNC">
@@ -688,15 +666,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GC-oc-jfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="2128"/>
+            <point key="canvasLocation" x="-592" y="2128"/>
         </scene>
         <!--HOME-->
         <scene sceneID="oYW-tZ-oyh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWR-q3-6oq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="HOME" image="agora vai home" selectedImage="agora vai home" id="ri1-WD-7cX">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" tag="3" title="HOME" image="agora vai home" selectedImage="agora vai home" id="ri1-WD-7cX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaJ-tu-JF9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -720,7 +696,7 @@
                         <viewControllerLayoutGuide type="bottom" id="m5x-Id-L28"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="slU-XQ-2AK">
-                        <rect key="frame" x="0.0" y="0.0" width="246" height="655"/>
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Pessoa" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-nl-giX">
@@ -770,15 +746,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ix7-fw-hsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3912" y="-49.5"/>
+            <point key="canvasLocation" x="4012" y="215.5"/>
         </scene>
         <!--FICHA MEDICA-->
         <scene sceneID="esL-5s-Iud">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hB4-dD-dC2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FICHA MEDICA" image="Adicionar nav bar" selectedImage="Adicionar nav bar" id="xvq-jL-chk">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="FICHA MEDICA" image="Agora foi?" selectedImage="Agora foi?" id="xvq-jL-chk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Phz-au-eRn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -791,14 +765,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjU-QA-sxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1822" y="1091"/>
+            <point key="canvasLocation" x="-1822" y="1195"/>
         </scene>
     </scenes>
     <resources>
         <image name="Adicionar (fotos fica em baixo)" width="98" height="98"/>
-        <image name="Adicionar nav bar" width="74" height="74"/>
+        <image name="Agora foi?" width="22" height="30"/>
         <image name="Anotaçoes" width="563" height="725"/>
-        <image name="Ativo 63" width="39" height="50"/>
         <image name="Editar" width="44" height="45"/>
         <image name="Fundo" width="2052" height="1537"/>
         <image name="Jogos" width="571" height="703"/>

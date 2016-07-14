@@ -47,10 +47,16 @@ class MyTabbarController: UITabBarController,UINavigationControllerDelegate{
         UITabBar.appearance().tintColor = color
         // Sets the default color of the background of the UITabBar
         UITabBar.appearance().barTintColor = color2
-        UITabBarItemPositioning.Fill
         
         
         
     }
+    
+   
+
+    
+    
+    
+    
     
 }

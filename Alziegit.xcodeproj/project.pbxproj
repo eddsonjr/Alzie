@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		87658BA61D35AF61001DD219 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87658BA51D35AF61001DD219 /* TabBar.swift */; };
 		87F960971D36BB50001CEB6D /* FichaMedica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F960961D36BB50001CEB6D /* FichaMedica.swift */; };
+		AD4DAA401D383808005B6C55 /* FichaMedicaInsercao.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4DAA3F1D383808005B6C55 /* FichaMedicaInsercao.swift */; };
 		AD75A8E61D2B07A7005DECCD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; };
 		AD75A8E71D2B07A8005DECCD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E41D2B07A7005DECCD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD75A8E81D2B07A8005DECCD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */; };
@@ -75,6 +76,7 @@
 		523263B38CFF0BE7CE8C18ED /* Pods-Alziegit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alziegit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alziegit/Pods-Alziegit.release.xcconfig"; sourceTree = "<group>"; };
 		87658BA51D35AF61001DD219 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		87F960961D36BB50001CEB6D /* FichaMedica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaMedica.swift; sourceTree = "<group>"; };
+		AD4DAA3F1D383808005B6C55 /* FichaMedicaInsercao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaMedicaInsercao.swift; sourceTree = "<group>"; };
 		AD75A8E41D2B07A7005DECCD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		AD75A8E51D2B07A7005DECCD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		AD75A8EF1D2B0B17005DECCD /* Albuns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Albuns.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				87658BA51D35AF61001DD219 /* TabBar.swift */,
 				87F960961D36BB50001CEB6D /* FichaMedica.swift */,
 				ADA20C7F1D36FE3C00C0EAF7 /* AmpliarFotoViewController.swift */,
+				AD4DAA3F1D383808005B6C55 /* FichaMedicaInsercao.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -337,7 +340,7 @@
 				TargetAttributes = {
 					ADA682FD1D2B04F400496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W3HBC24LTT;
+						DevelopmentTeam = 7WV8M257CC;
 					};
 					ADA683111D2B04F500496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -450,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4DAA401D383808005B6C55 /* FichaMedicaInsercao.swift in Sources */,
 				ADC2C3551D2DB1A800FECC5A /* NamedViewController.swift in Sources */,
 				AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */,
 				ADBA2F051D34221800D5B2DE /* Alertas.swift in Sources */,

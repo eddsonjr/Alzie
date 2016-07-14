@@ -65,6 +65,10 @@ class AlbumViewController: UIViewController,UICollectionViewDataSource,UICollect
         print("Vetor com objetos: \(self.listaBanco.count)")
         
         
+        //Tentando colocar um codigo para atualizar a lista de albuns carregados ja
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AlbumViewController.reloadCollectionView(_:)), name: "recarregarTelaDeAlbuns", object: nil)
+
+        
         let color = UIColor(netHex:0x362256)
         
         let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 30))

@@ -14,6 +14,8 @@ import UIKit
 class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
 
     
+    @IBOutlet weak var parentescoLabel: UILabel!
+    @IBOutlet weak var NomePessoaLegenda: UILabel!
     @IBOutlet weak var fotoPerfil: UIImageView!
     //nome da segue para esta controladora: verFotosDoAlbum
     
@@ -44,6 +46,8 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         
         self.imagemConvertida = UIImage(data: self.albumDoEnte.fotoAvatar!)
         self.fotoPerfil.image = imagemConvertida
+        self.NomePessoaLegenda.text = albumDoEnte.NomeEnteLegenda
+        self.parentescoLabel.text = albumDoEnte.grauParentescoLegenda
         print("Dentro de visualizar album. Nome do album carregado: \(self.albumDoEnte.NomeEnteLegenda)")
         //self.qtFotosNoAlbumLabel.text = String(albumDoEnte.listaFotosDoAlbum.count)
         retornarListaDeFotosDesteAlbum()
@@ -100,8 +104,7 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
             cell.idFoto.text = albumDoEnte.listaFotosDoAlbum[indexPath.row].legendaDaFoto
                     
         
-        cell.frame.size.width = screenWidth / 4.3
-        cell.frame.size.height = screenWidth / 4.3
+        
         return cell
     }
     

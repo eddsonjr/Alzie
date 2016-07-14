@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YMg-ja-NFw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YMg-ja-NFw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,6 +23,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-wK-FGm">
                                 <rect key="frame" x="362" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Jogos"/>
+                                <connections>
+                                    <action selector="jogosBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZv-ae-6sI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anotações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-E1-hYQ">
                                 <rect key="frame" x="784" y="130" width="138" height="27"/>
@@ -45,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-eH-MFQ">
                                 <rect key="frame" x="704" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Anotaçoes"/>
+                                <connections>
+                                    <action selector="anotacoesBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAa-Xu-idL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-6r-ZHM">
                                 <rect key="frame" x="20" y="184" width="300" height="462"/>
@@ -181,12 +187,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-wL-UNt">
-                                <rect key="frame" x="10" y="440" width="213" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parentesco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hli-TM-VrS">
                                 <rect key="frame" x="59" y="405" width="120" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -248,13 +248,21 @@
                                     <outlet property="delegate" destination="lVr-Lj-wlG" id="Pgk-6k-kJf"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-wL-UNt">
+                                <rect key="frame" x="10" y="440" width="213" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="NomePessoaLegenda" destination="ze1-J7-T7T" id="4D0-Se-dhP"/>
                         <outlet property="collectionDasFotos" destination="Jmh-La-wbK" id="D8N-OA-gBx"/>
                         <outlet property="fotoPerfil" destination="E41-Sa-7gk" id="koQ-7f-bBL"/>
+                        <outlet property="parentescoLabel" destination="kSR-wL-UNt" id="Pp8-fd-8Ff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhK-gf-DsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,10 +549,10 @@
             </objects>
             <point key="canvasLocation" x="-1822" y="2128"/>
         </scene>
-        <!--Ficha Medica-->
+        <!--Ficha Medica Insercao-->
         <scene sceneID="Jok-3J-YzZ">
             <objects>
-                <viewController id="giG-SO-wjp" customClass="FichaMedica" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="giG-SO-wjp" customClass="FichaMedicaInsercao" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bUl-Un-x0r"/>
                         <viewControllerLayoutGuide type="bottom" id="EOd-XN-WKb"/>
@@ -593,6 +601,9 @@
                                 <rect key="frame" x="51" y="72" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.67000001669999998" green="0.67000001669999998" blue="0.67000001669999998" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="salvarFichaMedicaPacienteBTN:" destination="giG-SO-wjp" eventType="touchUpInside" id="1jn-u8-52e"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOW-7W-9Dp">
                                 <rect key="frame" x="50" y="350" width="237" height="30"/>
@@ -611,11 +622,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMp-1B-01w">
                                 <rect key="frame" x="50" y="623" width="237" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-lo-upQ">
-                                <rect key="frame" x="578" y="350" width="237" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -644,6 +650,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-lo-upQ">
+                                <rect key="frame" x="578" y="350" width="237" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -656,6 +667,16 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="PacienteImagemBTN" destination="bbd-hy-HPG" id="fv3-lo-VZ1"/>
+                        <outlet property="grupoSanguineoTextEdit" destination="wMp-1B-01w" id="sBX-vS-b7s"/>
+                        <outlet property="medicamenteosTextEdit" destination="kYF-tU-H1u" id="lXJ-Ni-AS4"/>
+                        <outlet property="nomePacienteTextEdit" destination="Y4k-I3-GQj" id="NsT-X7-zm4"/>
+                        <outlet property="problemasSaudePacienteTextEdit" destination="QOW-7W-9Dp" id="sCA-YK-kUg"/>
+                        <outlet property="reacoesAlertgicasPacienteTextEdit" destination="BdG-ol-zPf" id="iPc-Ty-9NF"/>
+                        <outlet property="telefoneEmeregencia1NomeTextEdit" destination="8pM-lo-upQ" id="uGQ-2I-7WN"/>
+                        <outlet property="telefoneEmergencia1NumeroTextEdit" destination="K6Y-Gd-hFP" id="wSm-gF-09X"/>
+                        <outlet property="telefoneEmergencia2NomeTextEdit" destination="sLp-2H-Fti" id="pgQ-Eu-GL8"/>
+                        <outlet property="telefoneEmergencia2NumeroTextEdit" destination="KXa-Hq-vu2" id="w22-Dj-Hs9"/>
+                        <outlet property="tirarFotoPacienteBTN" destination="bbd-hy-HPG" id="AEH-ZA-Wu6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GC-oc-jfx" userLabel="First Responder" sceneMemberID="firstResponder"/>

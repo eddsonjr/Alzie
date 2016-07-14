@@ -72,8 +72,8 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
             alerta.show()
             
             //SOMENTE PARA TESTES - VERIFICAR A RETIRADA DESTA LINHA APOS
-            //self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
-            //converterImagemParaNSDATA()
+            self.fotoPerfilAdicionarAlbumBTN.setImage(self.fotoTirada, forState: .Normal)
+            converterImagemParaNSDATA()
             
         }
 

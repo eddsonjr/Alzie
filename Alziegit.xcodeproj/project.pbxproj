@@ -35,6 +35,7 @@
 		ADC2C3511D2D8F2200FECC5A /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */; };
 		ADC2C3531D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3521D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift */; };
 		ADC2C3551D2DB1A800FECC5A /* NamedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2C3541D2DB1A800FECC5A /* NamedViewController.swift */; };
+		ADD78C1E1D372210009B7A57 /* FichaMedicaInsercao.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD78C1D1D372210009B7A57 /* FichaMedicaInsercao.swift */; };
 		E5FD36758B6A25F777FA6669 /* Pods_Alziegit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		ADC2C3501D2D8F2200FECC5A /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		ADC2C3521D2D95D300FECC5A /* AdicionarPessoaContainerControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarPessoaContainerControllerViewController.swift; sourceTree = "<group>"; };
 		ADC2C3541D2DB1A800FECC5A /* NamedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedViewController.swift; sourceTree = "<group>"; };
+		ADD78C1D1D372210009B7A57 /* FichaMedicaInsercao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaMedicaInsercao.swift; sourceTree = "<group>"; };
 		AFE1B1146C0D87D9CD38FAA8 /* Pods_Alziegit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alziegit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				87658BA51D35AF61001DD219 /* TabBar.swift */,
 				87F960961D36BB50001CEB6D /* FichaMedica.swift */,
 				ADA20C7F1D36FE3C00C0EAF7 /* AmpliarFotoViewController.swift */,
+				ADD78C1D1D372210009B7A57 /* FichaMedicaInsercao.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -337,7 +340,7 @@
 				TargetAttributes = {
 					ADA682FD1D2B04F400496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = W3HBC24LTT;
+						DevelopmentTeam = 7WV8M257CC;
 					};
 					ADA683111D2B04F500496E47 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -450,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD78C1E1D372210009B7A57 /* FichaMedicaInsercao.swift in Sources */,
 				ADC2C3551D2DB1A800FECC5A /* NamedViewController.swift in Sources */,
 				AD75A8F41D2B0EDE005DECCD /* albumDAO.swift in Sources */,
 				ADBA2F051D34221800D5B2DE /* Alertas.swift in Sources */,

@@ -19,6 +19,8 @@ class FichaDoPaciente: Object{
     dynamic var tSangue: String?
     dynamic var telefone1: String?
     dynamic var telefone2: String?
+    dynamic var telefone1Nome: String?
+    dynamic var telefone2Nome: String?
     dynamic var problemasDeSaude: String?
     dynamic var medicamentos: String?
     dynamic var alergiasConhecidas: String?

@@ -21,5 +21,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     }
     
     
+    @IBAction func jogosBTN(sender: AnyObject) {
+        print("Nada implementado aqui!")
+        
+        var alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Alzie ainda está em desenvolvimento. Espere as próximas versões para que esta funcionalidade esteja implementada!", delegate: self, cancelButtonTitle: "Ok")
+        alerta.show()
+        
+        
+    }
+    
+    @IBAction func anotacoesBTN(sender: AnyObject) {
+        print("Nada implementado aqui!")
+        
+        var alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Alzie ainda está em desenvolvimento. Espere as próximas versões para que esta funcionalidade esteja implementada!", delegate: self, cancelButtonTitle: "Ok")
+        alerta.show()
+
+
+    }
+  
+    
 }
 

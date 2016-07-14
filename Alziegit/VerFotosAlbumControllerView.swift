@@ -8,6 +8,7 @@
 //  Esta classe permite que você visualize fotos dos albums criados. 
 // 
 //
+//nome da segue para esta controladora: verFotosDoAlbum
 
 import UIKit
 
@@ -15,7 +16,9 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
 
     
     @IBOutlet weak var fotoPerfil: UIImageView!
-    //nome da segue para esta controladora: verFotosDoAlbum
+    @IBOutlet weak var nomePerfilLabel: UILabel!
+    @IBOutlet weak var parentescoPefilLabel: UILabel!
+    
     
        //@IBOutlet weak var qtFotosNoAlbumLabel: UILabel!
     @IBOutlet weak var collectionDasFotos: UICollectionView!
@@ -45,6 +48,8 @@ class VerFotosAlbumControllerView: UIViewController, UICollectionViewDataSource,
         self.imagemConvertida = UIImage(data: self.albumDoEnte.fotoAvatar!)
         self.fotoPerfil.image = imagemConvertida
         print("Dentro de visualizar album. Nome do album carregado: \(self.albumDoEnte.NomeEnteLegenda)")
+        self.nomePerfilLabel.text = albumDoEnte.NomeEnteLegenda
+        self.parentescoPefilLabel.text = albumDoEnte.grauParentescoLegenda
         //self.qtFotosNoAlbumLabel.text = String(albumDoEnte.listaFotosDoAlbum.count)
         retornarListaDeFotosDesteAlbum()
         

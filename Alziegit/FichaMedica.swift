@@ -10,7 +10,7 @@ import UIKit
 
 class FichaMedica: UIViewController {
 
-//    @IBOutlet var PacienteImage: UIImageView!
+    @IBOutlet var PacienteImage: UIImageView!
     @IBOutlet var NomePaciente: UILabel!
     @IBOutlet var AniversarioPaciente: UILabel!
     
@@ -33,6 +33,10 @@ class FichaMedica: UIViewController {
         
         print("asdasdsdsd")
         // Do any additional setup after loading the view.
+        PacienteImage.layer.borderWidth = 2
+        PacienteImage.layer.borderColor = UIColor.blackColor().CGColor
+        PacienteImage.layer.cornerRadius = 30
+        PacienteImage.layer.backgroundColor =  UIColor.redColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +45,7 @@ class FichaMedica: UIViewController {
     }
     
 
+    
     
     
     

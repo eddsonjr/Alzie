@@ -20,13 +20,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fundo" translatesAutoresizingMaskIntoConstraints="NO" id="nno-D9-UFG">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-6r-ZHM">
-                                <rect key="frame" x="20" y="184" width="300" height="462"/>
-                                <state key="normal" title="Button" image="Memorias"/>
-                                <connections>
-                                    <segue destination="rkW-y5-SLg" kind="show" id="Q1A-iv-3Cg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-wK-FGm">
                                 <rect key="frame" x="362" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Jogos"/>
@@ -52,6 +45,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-eH-MFQ">
                                 <rect key="frame" x="704" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Anotaçoes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-6r-ZHM">
+                                <rect key="frame" x="20" y="184" width="300" height="462"/>
+                                <state key="normal" title="Button" image="Memorias"/>
+                                <connections>
+                                    <segue destination="rkW-y5-SLg" kind="show" id="Q1A-iv-3Cg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

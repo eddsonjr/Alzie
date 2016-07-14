@@ -31,7 +31,7 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
         super.viewDidLoad()
         
         //configurando o campo de texto para as notas 
-        self.notasPessoaAdicionarTextArea.textContainer.maximumNumberOfLines = 3
+       // self.notasPessoaAdicionarTextArea.textContainer.maximumNumberOfLines = 3
         
     }
 

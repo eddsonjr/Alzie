@@ -223,9 +223,19 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
            
         }
         
+        let cancellButton = UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default){
+            UIAlertAction in
+
+            self.alertaAddFotoNoAlbum?.dismissViewControllerAnimated(true, completion: nil)
+            
+        }
+        
+        
+        
         //adicionando os botoes ao controlador
         self.alertaAddFotoNoAlbum?.addAction(cameraAlertaAddButton)
         self.alertaAddFotoNoAlbum?.addAction(galeriaAlertaAddButton)
+        self.alertaAddFotoNoAlbum?.addAction(cancellButton)
         
         //mostrando o alerta na tela
          self.presentViewController(alertaAddFotoNoAlbum!, animated: true, completion: nil)

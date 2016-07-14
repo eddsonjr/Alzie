@@ -131,7 +131,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ohW-xu-m3o">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="4mk-Kp-7MQ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J2R-Bc-mvh">
+                        <barButtonItem key="rightBarButtonItem" image="Mais roxo" id="J2R-Bc-mvh">
                             <color key="tintColor" red="0.16862745100000001" green="0.070588235289999995" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="d05-qt-Ttv" kind="show" id="v17-X8-zca"/>
@@ -362,7 +362,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qy-9f-lZq">
-                                <rect key="frame" x="919" y="619" width="80" height="80"/>
+                                <rect key="frame" x="948" y="647" width="50" height="51"/>
                                 <state key="normal" image="Adicionar (fotos fica em baixo)">
                                     <color key="titleColor" red="0.16862745098039217" green="0.070588235294117646" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -425,19 +425,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTl-QL-KIq">
-                                <rect key="frame" x="905" y="621" width="45" height="45"/>
-                                <state key="normal" title="Button" image="Editar"/>
-                                <connections>
-                                    <segue destination="giG-SO-wjp" kind="show" id="dIU-bt-Ah2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Editar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br8-zJ-ip4">
-                                <rect key="frame" x="905" y="674" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.15686274509803921" green="0.082352941176470587" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Problemas de saúde" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-kd-dDb">
                                 <rect key="frame" x="50" y="310" width="238" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -536,6 +523,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTl-QL-KIq">
+                                <rect key="frame" x="959" y="654" width="45" height="45"/>
+                                <state key="normal" title="Button" image="Editar"/>
+                                <connections>
+                                    <segue destination="giG-SO-wjp" kind="show" id="dIU-bt-Ah2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -699,7 +693,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="246" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Pessoa" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-nl-giX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Pessoa*" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-nl-giX">
                                 <rect key="frame" x="20" y="223" width="206" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -710,23 +704,6 @@
                                 <color key="textColor" red="0.16862745100000001" green="0.070588235289999995" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-i7-teG">
-                                <rect key="frame" x="20" y="322" width="206" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nota:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izC-GU-6nx">
-                                <rect key="frame" x="20" y="427" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Texto de Teste do Container. Testando  se o aplicativo esta funcionando corretamente." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jg9-ZA-wDp">
-                                <rect key="frame" x="3" y="456" width="240" height="84"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prx-eV-B91">
                                 <rect key="frame" x="23" y="8" width="200" height="200"/>
                                 <state key="normal" title="Button" image="noImageIcon"/>
@@ -734,6 +711,11 @@
                                     <action selector="adicionarFotoPerfilPessoaAlbumBTN:" destination="6h0-Mt-gtF" eventType="touchUpInside" id="QRJ-eh-aP2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Filho*" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-i7-teG">
+                                <rect key="frame" x="20" y="322" width="206" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -741,7 +723,6 @@
                         <outlet property="fotoPerfilAdicionarAlbumBTN" destination="Prx-eV-B91" id="GfF-oo-ZSg"/>
                         <outlet property="grauParetescoPessoaTextEdit" destination="u1r-i7-teG" id="8IY-Mj-6Yr"/>
                         <outlet property="nomePessoaAdicionarTextEdit" destination="YL4-nl-giX" id="W7q-Ia-4wr"/>
-                        <outlet property="notasPessoaAdicionarTextArea" destination="jg9-ZA-wDp" id="sIP-se-8dC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ix7-fw-hsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -752,7 +733,7 @@
         <scene sceneID="esL-5s-Iud">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hB4-dD-dC2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FICHA MEDICA" image="Agora foi?" selectedImage="Agora foi?" id="xvq-jL-chk"/>
+                    <tabBarItem key="tabBarItem" title="FICHA MEDICA" image="FOIN" selectedImage="FOIN" id="xvq-jL-chk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Phz-au-eRn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -770,12 +751,13 @@
     </scenes>
     <resources>
         <image name="Adicionar (fotos fica em baixo)" width="98" height="98"/>
-        <image name="Agora foi?" width="22" height="30"/>
         <image name="Anotaçoes" width="563" height="725"/>
         <image name="Editar" width="44" height="45"/>
+        <image name="FOIN" width="22" height="30"/>
         <image name="Fundo" width="2052" height="1537"/>
         <image name="Jogos" width="571" height="703"/>
         <image name="Livro_1" width="1877" height="2241"/>
+        <image name="Mais roxo" width="27" height="27"/>
         <image name="Memorias" width="593" height="802"/>
         <image name="Moldura 4" width="1393" height="1502"/>
         <image name="Numero emergencia" width="52" height="52"/>

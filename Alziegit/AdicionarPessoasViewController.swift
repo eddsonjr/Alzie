@@ -337,6 +337,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         self.presentViewController(alertaLegenda, animated: true, completion: nil)
         
+        print("")
+        
         return legendaInserida
         
     }

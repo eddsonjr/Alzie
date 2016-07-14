@@ -512,3 +512,26 @@ return legendaInserida!
 
 
 
+
+
+@IBAction func TirarFotoPacienteBTN(sender: AnyObject) {
+if hasCam {
+imagePicker.delegate = self
+imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+imagePicker.allowsEditing = true
+self.presentViewController(imagePicker, animated: true, completion: nil)
+}else{
+let alerta: UIAlertView = UIAlertView(title: "Atenção", message: "Seu dispositivo não tem suporte a câmera", delegate: self, cancelButtonTitle: "Ok")
+alerta.show()
+
+//caso nao haja camera, salvando uma imagem qualquer como avatar
+self.tirarFotoPacienteBTN.setImage(self.fotoPacientePadrao, forState: .Normal)
+fichaPaciente.foto = converterImagemParaNSDATA(self.fotoPacientePadrao)
+}
+
+
+}
+
+
+
+

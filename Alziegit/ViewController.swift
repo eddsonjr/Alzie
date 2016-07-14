@@ -12,6 +12,9 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
 
     }
 

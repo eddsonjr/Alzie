@@ -31,10 +31,6 @@
                                 <rect key="frame" x="362" y="184" width="300" height="400"/>
                                 <state key="normal" title="Button" image="Jogos"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-eH-MFQ">
-                                <rect key="frame" x="704" y="184" width="300" height="400"/>
-                                <state key="normal" title="Button" image="Anotaçoes"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anotações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-E1-hYQ">
                                 <rect key="frame" x="784" y="130" width="138" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
@@ -53,6 +49,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-eH-MFQ">
+                                <rect key="frame" x="704" y="184" width="300" height="400"/>
+                                <state key="normal" title="Button" image="Anotaçoes"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -63,6 +63,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="664" y="324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XgU-0L-EjX">
+            <objects>
+                <viewController id="MM3-2s-h2A" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uST-ug-taF"/>
+                        <viewControllerLayoutGuide type="bottom" id="6g7-Or-RYT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WG5-ed-S9x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ativo 63" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-Ot-kvN">
+                                <rect key="frame" x="180" y="188" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beX-NS-AJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="1128"/>
         </scene>
         <!--Album View Controller-->
         <scene sceneID="rly-gT-qNM">
@@ -396,6 +419,8 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YMg-ja-NFw" customClass="MyTabbarController" customModule="Alziegit" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="7zr-S2-v2o">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -408,7 +433,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFM-PG-hwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1498" y="272"/>
+            <point key="canvasLocation" x="-1822" y="108"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zVz-VP-TNC">
@@ -542,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwK-XX-yRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1498" y="1912"/>
+            <point key="canvasLocation" x="-1822" y="2128"/>
         </scene>
         <!--Ficha Medica-->
         <scene sceneID="Jok-3J-YzZ">
@@ -663,13 +688,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GC-oc-jfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="1912"/>
+            <point key="canvasLocation" x="-295" y="2128"/>
         </scene>
-        <!--Item-->
+        <!--HOME-->
         <scene sceneID="oYW-tZ-oyh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWR-q3-6oq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ri1-WD-7cX"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="HOME" image="agora vai home" selectedImage="agora vai home" id="ri1-WD-7cX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaJ-tu-JF9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -745,11 +772,13 @@
             </objects>
             <point key="canvasLocation" x="3912" y="-49.5"/>
         </scene>
-        <!--Item-->
+        <!--FICHA MEDICA-->
         <scene sceneID="esL-5s-Iud">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hB4-dD-dC2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xvq-jL-chk"/>
+                    <tabBarItem key="tabBarItem" title="FICHA MEDICA" image="Adicionar nav bar" selectedImage="Adicionar nav bar" id="xvq-jL-chk">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Phz-au-eRn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -762,12 +791,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjU-QA-sxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1498" y="1085"/>
+            <point key="canvasLocation" x="-1822" y="1091"/>
         </scene>
     </scenes>
     <resources>
         <image name="Adicionar (fotos fica em baixo)" width="98" height="98"/>
+        <image name="Adicionar nav bar" width="74" height="74"/>
         <image name="Anotaçoes" width="563" height="725"/>
+        <image name="Ativo 63" width="39" height="50"/>
         <image name="Editar" width="44" height="45"/>
         <image name="Fundo" width="2052" height="1537"/>
         <image name="Jogos" width="571" height="703"/>
@@ -775,6 +806,7 @@
         <image name="Memorias" width="593" height="802"/>
         <image name="Moldura 4" width="1393" height="1502"/>
         <image name="Numero emergencia" width="52" height="52"/>
+        <image name="agora vai home" width="30" height="30"/>
         <image name="noImageIcon" width="418" height="455"/>
     </resources>
 </document>

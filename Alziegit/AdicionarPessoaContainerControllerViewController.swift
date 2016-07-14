@@ -13,7 +13,7 @@ class AdicionarPessoaContainerControllerViewController: UIViewController,UIImage
     
     //Elementos Visuais do Container de Adicionar Pessoas
     @IBOutlet weak var nomePessoaAdicionarTextEdit: UITextField!
-    @IBOutlet weak var notasPessoaAdicionarTextArea: UITextView!
+   // @IBOutlet weak var notasPessoaAdicionarTextArea: UITextView!
     @IBOutlet weak var fotoPerfilAdicionarAlbumBTN: UIButton!
     @IBOutlet weak var dataAniversarioPessoaTextArea: UITextField!
     @IBOutlet weak var grauParetescoPessoaTextEdit: UITextField!

@@ -160,7 +160,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             self.album.fotoAvatar = self.addPessoasContainer?.fotoTiradaConvertidaNSDATA
         }
         
-        self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
+        //self.album.notasPessoa = self.addPessoasContainer?.notasPessoaAdicionarTextArea.text
         
         //verificando se ha possibilidade de salvar
         if(self.grauParentescoNulo || self.nomeParenteNulo || self.fotosNulo){ //nao pode deixar salvar

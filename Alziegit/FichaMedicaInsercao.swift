@@ -45,7 +45,12 @@ class FichaMedicaInsercao: UIViewController,UIImagePickerControllerDelegate,UINa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FichaMedicaInsercao.keyboardDidShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FichaMedicaInsercao.keyboardDidHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +69,17 @@ class FichaMedicaInsercao: UIViewController,UIImagePickerControllerDelegate,UINa
     }
     */
 
+    
+    
+    
+    //funcao para manipuar o teclado
+    func keyboardDidShow(notifcation: NSNotification){
+        self.view.frame.origin.y = -60
+    }
+    
+    func keyboardDidHide(notification: NSNotification){
+        self.view.frame.origin.y = 0
+    }
     
     
     
@@ -98,9 +114,19 @@ class FichaMedicaInsercao: UIViewController,UIImagePickerControllerDelegate,UINa
         fichaPaciente.telefone1 = self.telefoneEmergencia1NumeroTextEdit.text
         fichaPaciente.telefone2Nome = self.telefoneEmergencia2NomeTextEdit.text
         fichaPaciente.telefone2 = self.telefoneEmergencia2NumeroTextEdit.text
+        fichaPaciente.tSangue = self.grupoSanguineoTextEdit.text
+        
         
         fichaDAO.salvarFichaPaciente(self.fichaPaciente)
         print("Ficha medica salva")
+        print("Paciente Nome: \(self.fichaPaciente.nome)")
+        
+        let alerta: UIAlertView = UIAlertView(title: "Informações do Paciente", message: "Informações do paciente salvas com sucesso", delegate: self, cancelButtonTitle: "Ok")
+        alerta.show()
+        
+        
+        //NSNotificationCenter.defaultCenter().postNotificationName("mostrarDadosFichaMedica", object: nil)
+
     }
     
     

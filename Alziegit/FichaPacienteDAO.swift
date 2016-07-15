@@ -28,12 +28,29 @@ class FichaPacienteDAO {
     }
     
     
-    //retornando a ficha do paciente
-    func retornarFichaDoPaciente() -> Results<FichaDoPaciente>{
+//    //retornando a ficha do paciente
+    class func retornarFichaDoPaciente() -> Results<FichaDoPaciente>{
         let realm = try! Realm()
         
         let paciente = realm.objects(FichaDoPaciente.self)
         return paciente
     }
     
-}
+    
+    func retornarUltimaFichaRegistrada() -> FichaDoPaciente{
+        let realm = try! Realm()
+        
+        let paciente = realm.objects(FichaDoPaciente.self).last
+        return paciente!
+    }
+    
+    
+    
+    func retornarQuantidadeDeFichas() -> Int{
+         let realm = try! Realm()
+        
+         return realm.objects(FichaDoPaciente).count
+    }
+    
+    
+  }

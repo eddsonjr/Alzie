@@ -75,8 +75,8 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
         
         
         
-        self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
-        self.alerta!.show()
+        //self.alerta = UIAlertView(title: "teste", message: "AdicionarPessoasViewController ", delegate: self, cancelButtonTitle: "ok")
+        //self.alerta!.show()
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AdicionarPessoasViewController.keyboardDidShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -290,7 +290,7 @@ class AdicionarPessoasViewController: UIViewController, UIImagePickerControllerD
             self.fotoAvatarPadraoConvetidaNSDATA =  self.converterImagemParaNSDATA(self.fotoTirada)
             var fotosDoAlbum: FotosDoAlbum = FotosDoAlbum()
             fotosDoAlbum.foto = self.converterImagemParaNSDATA(self.fotoTirada)
-            fotosDoAlbum.legendaDaFoto =  self.colocarLegendaNaFoto()
+            //fotosDoAlbum.legendaDaFoto =  self.colocarLegendaNaFoto()
             self.album.listaFotosDoAlbum.append(fotosDoAlbum)
             //self.fotosDoAlbumLista.append(fotosDoAlbum)
             self.atualizarCollectionView("add")
